@@ -1,0 +1,161 @@
+.bywa-google-reviews{
+  background:linear-gradient(180deg,#0d181a,#101c1f);
+  overflow:hidden;
+  color:#fff;
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+}
+
+.bywa-google-reviews .container{
+  max-width:1280px;
+}
+
+.bywa-google-reviews .bywa-section-kicker{
+  color:#54B947;
+}
+
+.bywa-google-reviews .bywa-section-head{
+  margin-bottom:3rem;
+  max-width:760px;
+}
+
+.bywa-google-reviews .bywa-section-head h2{
+  margin:0;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(2.3rem,4vw,4rem);
+  line-height:.95;
+  color:#fff;
+}
+
+.bywa-google-reviews__carousel .owl-stage{
+  display:flex;
+}
+
+.bywa-google-reviews__carousel .owl-item{
+  display:flex;
+  height:auto;
+}
+
+.bywa-google-reviews__card{
+  position:relative;
+  width:100%;
+  min-height:100%;
+  background:rgba(255,255,255,.03);
+  border:1px solid rgba(84,185,71,.25);
+  overflow:hidden;
+}
+
+.bywa-google-reviews__inner{
+  padding:38px 36px;
+  color:#fff;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.bywa-google-reviews__quote-icon{
+  color:#54B947;
+  font-size:5.5rem;
+  line-height:1;
+  font-family:'Barlow Condensed',sans-serif;
+}
+
+.bywa-google-reviews__rating{
+  display:flex;
+  gap:4px;
+  margin:.75rem 0 1rem;
+  font-size:1rem;
+  line-height:1;
+}
+
+.bywa-google-reviews__star{
+  color:rgba(255,255,255,.22);
+}
+
+.bywa-google-reviews__star.is-active{
+  color:#54B947;
+}
+
+.bywa-google-reviews__inner p{
+  font-size:1.12rem;
+  line-height:1.8;
+  margin:0 0 1.35rem;
+  color:rgba(255,255,255,.92);
+}
+
+.bywa-google-reviews__inner h3{
+  font-size:2rem;
+  margin:0 0 .25rem;
+  color:#fff;
+}
+
+.bywa-google-reviews__inner > span{
+  color:#54B947;
+}
+
+.bywa-google-reviews__link{
+  margin-top:.9rem;
+}
+
+.bywa-google-reviews__link a{
+  color:#fff;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.28);
+}
+
+.bywa-google-reviews__carousel .owl-nav{
+  margin-top:26px;
+  display:flex;
+  justify-content:center;
+  gap:10px;
+}
+
+.bywa-google-reviews__carousel .owl-nav button.owl-prev,
+.bywa-google-reviews__carousel .owl-nav button.owl-next{
+  width:46px;
+  height:46px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.16) !important;
+  background:rgba(255,255,255,.08) !important;
+  color:#fff !important;
+  font-size:24px !important;
+  line-height:1 !important;
+  transition:all .25s ease;
+}
+
+.bywa-google-reviews__carousel .owl-nav button.owl-prev:hover,
+.bywa-google-reviews__carousel .owl-nav button.owl-next:hover{
+  background:#54B947 !important;
+  border-color:#54B947 !important;
+}
+
+.bywa-google-reviews__carousel.owl-theme .owl-dots{
+  margin-top:18px;
+  text-align:center;
+}
+
+.bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot span{
+  width:11px;
+  height:11px;
+  margin:5px 6px;
+  background:rgba(255,255,255,.35);
+}
+
+.bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot.active span,
+.bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot:hover span{
+  background:#54B947;
+}
+
+@media (max-width:991.98px){
+  .bywa-google-reviews__inner{
+    padding:34px 26px;
+  }
+}
+
+@media (max-width:767.98px){
+  .bywa-google-reviews__inner{
+    padding:30px 22px;
+  }
+}

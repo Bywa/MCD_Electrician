@@ -1,0 +1,446 @@
+.bywa-team,
+.bywa-team-showcase{
+  width:100%;
+}
+
+.bywa-team{
+  background:#fff;
+}
+
+.bywa-team-showcase{
+  padding:110px 0;
+  background:
+    radial-gradient(circle at top right, rgba(84,185,71,.18), transparent 34%),
+    linear-gradient(180deg, #f5f7f2, #eef1ec);
+  width:100vw;
+  margin-left:calc(50% - 50vw);
+  margin-right:calc(50% - 50vw);
+  overflow:hidden;
+}
+
+.bywa-team-showcase__content{
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
+.bywa-team-showcase__title{
+  margin:0 0 1rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:clamp(2.6rem, 4.4vw, 4.2rem);
+  line-height:.95;
+  color:#132326;
+}
+
+.bywa-team-showcase__text{
+  color:#5c6d72;
+  line-height:1.8;
+  margin-bottom:1rem;
+  flex:1;
+  min-height:0;
+}
+
+.bywa-team-showcase__text > *:last-child{
+  margin-bottom:0;
+}
+
+.bywa-team-showcase__text[data-bywa-team-description]{
+  overflow:hidden;
+}
+
+.bywa-team-showcase__text-inner{
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:9;
+  overflow:hidden;
+}
+
+.bywa-team-showcase__text.is-expanded .bywa-team-showcase__text-inner{
+  display:block;
+  -webkit-line-clamp:unset;
+  overflow:visible;
+}
+
+.bywa-team-showcase__more{
+  align-self:flex-start;
+  margin:0 0 1.25rem;
+  padding:0;
+  border:0;
+  background:none;
+  color:#54B947;
+  font-weight:700;
+}
+
+.bywa-team-showcase__actions{
+  display:flex;
+  justify-content:flex-end;
+  flex-wrap:nowrap;
+  gap:14px;
+  margin-top:18px;
+  width:100%;
+  overflow-x:auto;
+}
+
+.bywa-team-showcase__actions .bywa-btn{
+  margin:0;
+  white-space:nowrap;
+  flex:0 0 auto;
+}
+
+.bywa-team-showcase__actions .bywa-btn-outline-dark{
+  color:#fff;
+}
+
+.bywa-team-showcase__actions .bywa-btn-outline-dark:hover{
+  color:#fff;
+}
+
+.bywa-team-showcase__media-wrap{
+  position:relative;
+}
+
+.bywa-team-showcase__visual{
+  position:relative;
+  max-width:none;
+  margin-left:auto;
+}
+
+.bywa-team-slider{
+  position:relative;
+  width:100%;
+  aspect-ratio:16 / 9;
+  min-height:0;
+  overflow:hidden;
+  border-radius:36px;
+  background:#132326;
+  box-shadow:0 28px 60px rgba(19,35,38,.18);
+}
+
+.bywa-team-slider--empty{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle at top left, rgba(84,185,71,.28), transparent 32%),
+    linear-gradient(145deg, #132326, #1d3134);
+}
+
+.bywa-team-slider__empty{
+  display:flex;
+  flex-direction:column;
+  gap:.6rem;
+  padding:32px;
+  text-align:center;
+  color:#fff;
+}
+
+.bywa-team-slider__empty span{
+  color:rgba(255,255,255,.7);
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-size:.82rem;
+  font-weight:700;
+}
+
+.bywa-team-slider__empty strong{
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2.8rem;
+  line-height:.95;
+}
+
+.bywa-team-slider__viewport{
+  position:relative;
+  height:100%;
+  min-height:0;
+}
+
+.bywa-team-slider__slide{
+  position:absolute;
+  inset:0;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:scale(1.06);
+  transition:opacity .7s ease, transform 4.5s ease;
+}
+
+.bywa-team-slider__slide.is-active{
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:scale(1);
+}
+
+.bywa-team-slider__slide::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:linear-gradient(180deg, rgba(19,35,38,.06), rgba(19,35,38,.38));
+}
+
+.bywa-team-slider__image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.bywa-team-slider__controls{
+  position:absolute;
+  right:24px;
+  bottom:24px;
+  left:24px;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:14px;
+}
+
+.bywa-team-slider__arrow{
+  width:52px;
+  height:52px;
+  border:0;
+  border-radius:50%;
+  background:rgba(255,255,255,.16);
+  color:#fff;
+  font-size:2rem;
+  line-height:1;
+  backdrop-filter:blur(10px);
+  transition:transform .25s ease, background .25s ease;
+}
+
+.bywa-team-slider__arrow:hover{
+  transform:translateY(-2px);
+  background:#54B947;
+}
+
+.bywa-team-slider__dots{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  flex:1;
+}
+
+.bywa-team-slider__dot{
+  width:11px;
+  height:11px;
+  padding:0;
+  border:0;
+  border-radius:999px;
+  background:rgba(255,255,255,.38);
+  transition:transform .25s ease, background .25s ease;
+}
+
+.bywa-team-slider__dot.is-active{
+  background:#54B947;
+  transform:scale(1.15);
+}
+
+.bywa-team__members{
+  padding:36px 0 110px;
+}
+
+.bywa-team__grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:28px;
+}
+
+.bywa-team__grid--no-photos{
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+
+.bywa-team-card{
+  position:relative;
+  background:#f7f8f5;
+  border-radius:30px;
+  overflow:hidden;
+  box-shadow:0 10px 25px rgba(15,22,26,.06);
+  transition:transform .25s ease, box-shadow .25s ease;
+}
+
+.bywa-team-card--no-photo{
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:240px;
+  padding:28px 26px 30px;
+  background:
+    linear-gradient(180deg, rgba(84,185,71,.08), rgba(255,255,255,.96)),
+    #fff;
+  border:1px solid rgba(84,185,71,.12);
+}
+
+.bywa-team-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 20px 40px rgba(0,0,0,.10);
+}
+
+.bywa-team-card__media{
+  position:relative;
+  height:300px;
+  overflow:hidden;
+  background:linear-gradient(180deg, rgba(84,185,71,.1), rgba(13,24,26,.18));
+}
+
+.bywa-team-card__image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.bywa-team-card__body{
+  padding:24px 24px 28px;
+}
+
+.bywa-team-card--no-photo .bywa-team-card__body{
+  display:flex;
+  flex-direction:column;
+  padding:0;
+}
+
+.bywa-team-card__badge{
+  display:inline-flex;
+  align-items:center;
+  gap:.45rem;
+  margin-bottom:.9rem;
+  color:#54B947;
+  text-transform:uppercase;
+  font-weight:700;
+  letter-spacing:.05em;
+  font-size:.82rem;
+}
+
+.bywa-team-card__badge-icon{
+  position:relative;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  border:2px solid currentColor;
+  display:inline-block;
+}
+
+.bywa-team-card__badge-icon::before{
+  content:'';
+  position:absolute;
+  top:2px;
+  left:50%;
+  width:5px;
+  height:5px;
+  border-radius:50%;
+  background:currentColor;
+  transform:translateX(-50%);
+}
+
+.bywa-team-card__badge-icon::after{
+  content:'';
+  position:absolute;
+  left:50%;
+  bottom:2px;
+  width:8px;
+  height:5px;
+  border-radius:8px 8px 4px 4px;
+  border:2px solid currentColor;
+  border-bottom:0;
+  transform:translateX(-50%);
+}
+
+.bywa-team-card__name{
+  margin:0 0 .55rem;
+  font-family:'Barlow Condensed',sans-serif;
+  font-size:2rem;
+  line-height:1;
+  color:#132326;
+}
+
+.bywa-team-card__meta{
+  margin:0;
+  color:#6b7b80;
+}
+
+.bywa-team-card--no-photo .bywa-team-card__badge{
+  margin-bottom:1.1rem;
+}
+
+.bywa-team-card--no-photo .bywa-team-card__name{
+  margin-bottom:.8rem;
+}
+
+.bywa-team-card--no-photo .bywa-team-card__meta{
+  margin-top:auto;
+}
+
+@media (max-width:1199px){
+  .bywa-team-showcase{
+    padding:94px 0;
+  }
+
+  .bywa-team-showcase__stats{
+    grid-template-columns:1fr;
+  }
+
+  .bywa-team__grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+
+  .bywa-team__grid--no-photos{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width:991px){
+  .bywa-team-showcase__actions{
+    justify-content:flex-start;
+  }
+}
+
+@media (max-width:767px){
+  .bywa-team-showcase{
+    padding:84px 0;
+  }
+
+  .bywa-team-showcase__stats{
+    grid-template-columns:1fr;
+  }
+
+  .bywa-team-slider{
+    border-radius:26px;
+  }
+
+  .bywa-team-showcase__media-wrap{
+    padding-bottom:0;
+  }
+
+  .bywa-team-slider__controls{
+    right:18px;
+    bottom:18px;
+    left:18px;
+  }
+
+  .bywa-team-showcase__actions{
+    margin-top:16px;
+  }
+
+  .bywa-team__members{
+    padding:24px 0 84px;
+  }
+
+  .bywa-team__grid{
+    grid-template-columns:1fr;
+  }
+
+  .bywa-team__grid--no-photos{
+    grid-template-columns:1fr;
+  }
+
+  .bywa-team-card__media{
+    height:260px;
+  }
+
+  .bywa-team-card--no-photo{
+    min-height:0;
+  }
+}

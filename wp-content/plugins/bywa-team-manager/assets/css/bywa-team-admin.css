@@ -1,0 +1,142 @@
+.bywa-team-admin__list{
+  display:grid;
+  gap:18px;
+  margin-bottom:18px;
+}
+
+.bywa-team-admin__item{
+  padding:18px;
+  border:1px solid #dcdcde;
+  background:#fff;
+}
+
+.bywa-team-admin--presentation{
+  display:grid;
+  gap:18px;
+}
+
+.bywa-team-admin__item-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:14px;
+}
+
+.bywa-team-admin__grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:14px 18px;
+}
+
+.bywa-team-admin__photo{
+  margin-top:8px;
+}
+
+.bywa-team-admin__photo.is-hidden{
+  display:none;
+}
+
+.bywa-team-admin__photo-preview{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:140px;
+  height:140px;
+  margin-bottom:10px;
+  border:1px dashed #c3c4c7;
+  background:#f6f7f7;
+  overflow:hidden;
+}
+
+.bywa-team-admin__photo-preview img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.bywa-team-admin__photo-actions{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.bywa-team-admin__gallery-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+
+.bywa-team-admin__gallery-head span{
+  color:#646970;
+}
+
+.bywa-team-admin__gallery{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(180px, 1fr));
+  gap:16px;
+}
+
+.bywa-team-admin__gallery-item{
+  padding:14px;
+  border:1px solid #dcdcde;
+  background:#fff;
+}
+
+.bywa-team-admin__gallery-preview{
+  width:100%;
+  height:180px;
+}
+
+.bywa-hero-admin-images{
+  display:grid;
+  grid-template-columns:repeat(2, minmax(0, 1fr));
+  gap:18px;
+  margin-top:18px;
+}
+
+.bywa-hero-admin-image-card{
+  padding:14px;
+  border:1px solid #dcdcde;
+  background:#fff;
+}
+
+.bywa-hero-image-preview{
+  margin:10px 0 12px;
+  min-height:160px;
+  border:1px dashed #c3c4c7;
+  background:#f6f7f7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:10px;
+}
+
+.bywa-hero-image-preview img{
+  display:block;
+  max-width:100%;
+  max-height:180px;
+  height:auto;
+}
+
+.bywa-hero-image-preview span{
+  color:#646970;
+}
+
+.bywa-hero-image-actions{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+@media (max-width:782px){
+  .bywa-team-admin__grid{
+    grid-template-columns:1fr;
+  }
+
+  .bywa-hero-admin-images{
+    grid-template-columns:1fr;
+  }
+}
