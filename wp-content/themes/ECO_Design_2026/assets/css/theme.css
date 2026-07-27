@@ -1991,6 +1991,10 @@ body.bywa-modal-open .bywa-page-content {
     border-color: rgba(255,210,31,.26);
 }
 
+.bywa-testimonial-card {
+    border: 1px solid rgba(255,210,31,.26);
+}
+
 .bywa-quote-shape,
 .bywa-testimonial-inner span,
 .bywa-google-reviews .bywa-section-kicker,
@@ -2087,6 +2091,15 @@ body.bywa-modal-open .bywa-page-content {
     color: #fff;
 }
 
+.bywa-contact-form-wrap {
+    border: 1px solid rgba(8,22,47,.08);
+}
+
+.wpcf7 {
+    --bywa-form-border: rgba(8,22,47,.12);
+    --bywa-form-focus: rgba(255,210,31,.18);
+}
+
 .bywa-footer-badge {
     background: linear-gradient(135deg, var(--bywa-green), #1b74ff);
 }
@@ -2113,6 +2126,11 @@ body.bywa-modal-open .bywa-page-content {
 .bywa-404__eyebrow,
 .bywa-project-city {
     border-left: 0;
+}
+
+.bywa-404__eyebrow {
+    background: rgba(255,210,31,.12);
+    color: var(--bywa-green-dark);
 }
 
 .bywa-404__links a:hover {

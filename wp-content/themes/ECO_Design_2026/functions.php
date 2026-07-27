@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BYWA_ECO_THEME_VERSION', '1.2.0');
+define('BYWA_ECO_THEME_VERSION', '1.3.0');
 
 action_if_theme_setup();
 

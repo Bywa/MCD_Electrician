@@ -10,7 +10,7 @@
 .bywa-team-showcase{
   padding:110px 0;
   background:
-    radial-gradient(circle at top right, rgba(84,185,71,.18), transparent 34%),
+    radial-gradient(circle at top right, rgba(255,210,31,.18), transparent 34%),
     linear-gradient(180deg, #f5f7f2, #eef1ec);
   width:100vw;
   margin-left:calc(50% - 50vw);
@@ -29,7 +29,7 @@
   font-family:'Barlow Condensed',sans-serif;
   font-size:clamp(2.6rem, 4.4vw, 4.2rem);
   line-height:.95;
-  color:#132326;
+  color:#08162f;
 }
 
 .bywa-team-showcase__text{
@@ -67,7 +67,7 @@
   padding:0;
   border:0;
   background:none;
-  color:#54B947;
+  color:#ffd21f;
   font-weight:700;
 }
 
@@ -112,8 +112,8 @@
   min-height:0;
   overflow:hidden;
   border-radius:36px;
-  background:#132326;
-  box-shadow:0 28px 60px rgba(19,35,38,.18);
+  background:#08162f;
+  box-shadow:0 28px 60px rgba(8,22,47,.18);
 }
 
 .bywa-team-slider--empty{
@@ -121,8 +121,8 @@
   align-items:center;
   justify-content:center;
   background:
-    radial-gradient(circle at top left, rgba(84,185,71,.28), transparent 32%),
-    linear-gradient(145deg, #132326, #1d3134);
+    radial-gradient(circle at top left, rgba(255,210,31,.28), transparent 32%),
+    linear-gradient(145deg, #08162f, #0f3f92);
 }
 
 .bywa-team-slider__empty{
@@ -212,7 +212,8 @@
 
 .bywa-team-slider__arrow:hover{
   transform:translateY(-2px);
-  background:#54B947;
+  background:#ffd21f;
+  color:#08162f;
 }
 
 .bywa-team-slider__dots{
@@ -234,7 +235,7 @@
 }
 
 .bywa-team-slider__dot.is-active{
-  background:#54B947;
+  background:#ffd21f;
   transform:scale(1.15);
 }
 
@@ -268,9 +269,9 @@
   min-height:240px;
   padding:28px 26px 30px;
   background:
-    linear-gradient(180deg, rgba(84,185,71,.08), rgba(255,255,255,.96)),
+    linear-gradient(180deg, rgba(255,210,31,.08), rgba(255,255,255,.96)),
     #fff;
-  border:1px solid rgba(84,185,71,.12);
+  border:1px solid rgba(255,210,31,.12);
 }
 
 .bywa-team-card:hover{
@@ -282,7 +283,7 @@
   position:relative;
   height:300px;
   overflow:hidden;
-  background:linear-gradient(180deg, rgba(84,185,71,.1), rgba(13,24,26,.18));
+  background:linear-gradient(180deg, rgba(255,210,31,.12), rgba(8,22,47,.18));
 }
 
 .bywa-team-card__image{
@@ -307,7 +308,7 @@
   align-items:center;
   gap:.45rem;
   margin-bottom:.9rem;
-  color:#54B947;
+  color:#ffd21f;
   text-transform:uppercase;
   font-weight:700;
   letter-spacing:.05em;
@@ -353,7 +354,7 @@
   font-family:'Barlow Condensed',sans-serif;
   font-size:2rem;
   line-height:1;
-  color:#132326;
+  color:#08162f;
 }
 
 .bywa-team-card__meta{
@@ -443,4 +444,61 @@
   .bywa-team-card--no-photo{
     min-height:0;
   }
+}
+
+/* ===== MCD ELECTRICIAN BRAND OVERRIDES ===== */
+.bywa-team-showcase{
+  background:
+    radial-gradient(circle at top right, rgba(255,210,31,.16), transparent 34%),
+    linear-gradient(180deg, #f5f8ff, #eef4ff);
+}
+
+.bywa-team-showcase__title,
+.bywa-team-card__name{
+  color:#08162f;
+}
+
+.bywa-team-showcase__more,
+.bywa-team-card__badge{
+  color:#ffd21f;
+}
+
+.bywa-team-slider{
+  background:#08162f;
+  box-shadow:0 28px 60px rgba(8,22,47,.18);
+}
+
+.bywa-team-slider--empty{
+  background:
+    radial-gradient(circle at top left, rgba(255,210,31,.24), transparent 32%),
+    linear-gradient(145deg, #08162f, #0f3f92);
+}
+
+.bywa-team-slider__slide::after{
+  background:linear-gradient(180deg, rgba(8,22,47,.06), rgba(8,22,47,.38));
+}
+
+.bywa-team-slider__arrow:hover{
+  background:#ffd21f;
+  color:#08162f;
+}
+
+.bywa-team-slider__dot.is-active{
+  background:#ffd21f;
+}
+
+.bywa-team-card,
+.bywa-team-card--no-photo{
+  box-shadow:0 10px 25px rgba(8,22,47,.08);
+}
+
+.bywa-team-card__media{
+  background:linear-gradient(180deg, rgba(255,210,31,.12), rgba(8,22,47,.20));
+}
+
+.bywa-team-card--no-photo{
+  background:
+    linear-gradient(180deg, rgba(255,210,31,.08), rgba(255,255,255,.96)),
+    #fff;
+  border:1px solid rgba(255,210,31,.14);
 }

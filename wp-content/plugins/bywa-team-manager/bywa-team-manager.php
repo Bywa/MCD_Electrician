@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BYWA_TM_VERSION', '1.0.2');
+define('BYWA_TM_VERSION', '1.0.3');
 define('BYWA_TM_PATH', plugin_dir_path(__FILE__));
 define('BYWA_TM_URL', plugin_dir_url(__FILE__));
 

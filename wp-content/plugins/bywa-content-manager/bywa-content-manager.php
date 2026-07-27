@@ -8,7 +8,7 @@
 
 if (!defined('ABSPATH')) exit;
 
-define('BYWA_CM_VERSION', '1.2.6');
+define('BYWA_CM_VERSION', '1.2.7');
 define('BYWA_CM_PATH', plugin_dir_path(__FILE__));
 define('BYWA_CM_URL', plugin_dir_url(__FILE__));
 

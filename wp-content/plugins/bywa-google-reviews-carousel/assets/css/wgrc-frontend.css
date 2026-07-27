@@ -1,5 +1,5 @@
 .bywa-google-reviews{
-  background:linear-gradient(180deg,#0d181a,#101c1f);
+  background:linear-gradient(180deg,#08162f,#0a1f45);
   overflow:hidden;
   color:#fff;
   width:100vw;
@@ -12,7 +12,7 @@
 }
 
 .bywa-google-reviews .bywa-section-kicker{
-  color:#54B947;
+  color:#ffd21f;
 }
 
 .bywa-google-reviews .bywa-section-head{
@@ -42,7 +42,7 @@
   width:100%;
   min-height:100%;
   background:rgba(255,255,255,.03);
-  border:1px solid rgba(84,185,71,.25);
+  border:1px solid rgba(255,210,31,.24);
   overflow:hidden;
 }
 
@@ -55,7 +55,7 @@
 }
 
 .bywa-google-reviews__quote-icon{
-  color:#54B947;
+  color:#ffd21f;
   font-size:5.5rem;
   line-height:1;
   font-family:'Barlow Condensed',sans-serif;
@@ -74,7 +74,7 @@
 }
 
 .bywa-google-reviews__star.is-active{
-  color:#54B947;
+  color:#ffd21f;
 }
 
 .bywa-google-reviews__inner p{
@@ -91,7 +91,7 @@
 }
 
 .bywa-google-reviews__inner > span{
-  color:#54B947;
+  color:#ffd21f;
 }
 
 .bywa-google-reviews__link{
@@ -127,8 +127,9 @@
 
 .bywa-google-reviews__carousel .owl-nav button.owl-prev:hover,
 .bywa-google-reviews__carousel .owl-nav button.owl-next:hover{
-  background:#54B947 !important;
-  border-color:#54B947 !important;
+  background:#ffd21f !important;
+  border-color:#ffd21f !important;
+  color:#08162f !important;
 }
 
 .bywa-google-reviews__carousel.owl-theme .owl-dots{
@@ -145,7 +146,7 @@
 
 .bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot.active span,
 .bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot:hover span{
-  background:#54B947;
+  background:#ffd21f;
 }
 
 @media (max-width:991.98px){
@@ -158,4 +159,38 @@
   .bywa-google-reviews__inner{
     padding:30px 22px;
   }
+}
+
+/* ===== MCD ELECTRICIAN BRAND OVERRIDES ===== */
+.bywa-google-reviews{
+  background:
+    radial-gradient(circle at top right, rgba(255,210,31,.16), transparent 30%),
+    linear-gradient(180deg,#08162f,#0a1f45);
+}
+
+.bywa-google-reviews .bywa-section-kicker{
+  color:#ffd21f;
+}
+
+.bywa-google-reviews__card{
+  border-color:rgba(255,210,31,.24);
+  background:rgba(8,22,47,.72);
+}
+
+.bywa-google-reviews__quote-icon,
+.bywa-google-reviews__star.is-active,
+.bywa-google-reviews__inner > span{
+  color:#ffd21f;
+}
+
+.bywa-google-reviews__carousel .owl-nav button.owl-prev:hover,
+.bywa-google-reviews__carousel .owl-nav button.owl-next:hover{
+  background:#ffd21f !important;
+  border-color:#ffd21f !important;
+  color:#08162f !important;
+}
+
+.bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot.active span,
+.bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot:hover span{
+  background:#ffd21f;
 }

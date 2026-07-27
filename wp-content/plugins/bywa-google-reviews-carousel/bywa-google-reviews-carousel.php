@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
 }
 
 final class BYWA_Google_Reviews_Carousel_Plugin {
-    const VERSION = '1.0.0';
+    const VERSION = '1.0.1';
     const OPTION_KEY = 'wgrc_settings';
     const CPT = 'wgrc_review';
     const SHORTCODE = 'bywa_google_reviews';
