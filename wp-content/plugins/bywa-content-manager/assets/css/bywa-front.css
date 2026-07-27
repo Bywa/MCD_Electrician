@@ -1936,3 +1936,7 @@ h6,
 .bywa-quote-icon{
   font-family:'Saira', sans-serif;
 }
+
+h3{
+  font-family:'Saira', sans-serif !important;
+}

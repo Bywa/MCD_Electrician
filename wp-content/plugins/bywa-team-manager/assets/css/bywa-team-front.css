@@ -524,3 +524,7 @@ h6,
 .bywa-team-slider__empty strong{
   font-family:'Saira', sans-serif;
 }
+
+h3{
+  font-family:'Saira', sans-serif !important;
+}

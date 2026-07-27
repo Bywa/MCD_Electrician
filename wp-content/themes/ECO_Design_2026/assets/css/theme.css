@@ -51,11 +51,11 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
 .bywa-navbar-inner { min-height: 100px; }
 .bywa-brand img,
 .bywa-site-brand-logo {
-    width: clamp(190px, 18vw, 260px);
-    height: 92px;
+    width: clamp(150px, 12vw, 190px);
+    height: 74px;
     max-width: none;
-    object-fit: cover;
-    object-position: center top;
+    object-fit: contain;
+    object-position: center center;
 }
 .bywa-brand-text { color: var(--bywa-dark); font-size: 2rem; text-transform: uppercase; }
 .bywa-primary-menu { gap: 1rem; }
@@ -2195,4 +2195,8 @@ h6,
 .bywa-single-realisation__title,
 .bywa-single-service__title {
     font-family: 'Saira', sans-serif;
+}
+
+h3 {
+    font-family: 'Saira', sans-serif !important;
 }
