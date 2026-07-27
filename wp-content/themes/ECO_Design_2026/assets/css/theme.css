@@ -57,6 +57,11 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
     object-fit: contain;
     object-position: center center;
 }
+
+.bywa-site-brand-logo--header {
+    width: clamp(128px, 9vw, 162px);
+    height: 56px;
+}
 .bywa-brand-text { color: var(--bywa-dark); font-size: 2rem; text-transform: uppercase; }
 .bywa-primary-menu { gap: 1rem; }
 .bywa-primary-menu > li { position: relative; list-style: none; }

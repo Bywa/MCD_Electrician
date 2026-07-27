@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-define('BYWA_ECO_THEME_VERSION', '1.3.0');
+define('BYWA_ECO_THEME_VERSION', '1.3.1');
 
 action_if_theme_setup();
 
@@ -81,22 +81,34 @@ function bywa_eco_admin_enqueue_assets($hook) {
     );
 }
 
-function bywa_eco_get_brand_logo_path() {
-    return trailingslashit(get_template_directory()) . 'assets/images/MCD_LOGO.webp';
+function bywa_eco_get_brand_logo_path($variant = 'default') {
+    $file = ($variant === 'header') ? 'MCD_LOGO_Header.webp' : 'MCD_LOGO.webp';
+    return trailingslashit(get_template_directory()) . 'assets/images/' . $file;
 }
 
-function bywa_eco_get_brand_logo_url() {
-    $logo_path = bywa_eco_get_brand_logo_path();
+function bywa_eco_get_brand_logo_url($variant = 'default') {
+    $logo_path = bywa_eco_get_brand_logo_path($variant);
 
     if (!file_exists($logo_path)) {
+        if ($variant === 'header') {
+            $fallback_path = bywa_eco_get_brand_logo_path('default');
+
+            if (!file_exists($fallback_path)) {
+                return '';
+            }
+
+            return trailingslashit(get_template_directory_uri()) . 'assets/images/MCD_LOGO.webp';
+        }
+
         return '';
     }
 
-    return trailingslashit(get_template_directory_uri()) . 'assets/images/MCD_LOGO.webp';
+    $file = ($variant === 'header') ? 'MCD_LOGO_Header.webp' : 'MCD_LOGO.webp';
+    return trailingslashit(get_template_directory_uri()) . 'assets/images/' . $file;
 }
 
-function bywa_eco_get_brand_logo_html($class = 'bywa-site-brand-logo') {
-    $logo_url = bywa_eco_get_brand_logo_url();
+function bywa_eco_get_brand_logo_html($class = 'bywa-site-brand-logo', $variant = 'default') {
+    $logo_url = bywa_eco_get_brand_logo_url($variant);
 
     if ($logo_url !== '') {
         return sprintf(

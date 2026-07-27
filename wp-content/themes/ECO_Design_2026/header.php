@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
         <nav class="navbar navbar-expand-xl bywa-navbar">
             <div class="container bywa-navbar-inner">
                 <a class="navbar-brand bywa-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                    <?php echo bywa_eco_get_brand_logo_html('bywa-site-brand-logo'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    <?php echo bywa_eco_get_brand_logo_html('bywa-site-brand-logo bywa-site-brand-logo--header', 'header'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                 </a>
 
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#bywaMainNav" aria-controls="bywaMainNav" aria-expanded="false" aria-label="<?php esc_attr_e('Ouvrir le menu', 'eco-design-2026'); ?>">
