@@ -1,11 +1,13 @@
 :root {
-    --bywa-green: #54B947;
-    --bywa-green-dark: #3e9a33;
-    --bywa-dark: #0d181a;
-    --bywa-dark-soft: #132326;
-    --bywa-light: #f4f4f1;
-    --bywa-text: #182427;
-    --bywa-muted: #708086;
+    --bywa-green: #0f5bd8;
+    --bywa-green-dark: #0b3c99;
+    --bywa-dark: #08162f;
+    --bywa-dark-soft: #103a7b;
+    --bywa-light: #f4f7ff;
+    --bywa-text: #10233f;
+    --bywa-muted: #61708d;
+    --bywa-accent: #ffd21f;
+    --bywa-accent-dark: #e0b500;
     --bywa-width: 1280px;
     --bywa-shadow: 0 18px 45px rgba(0,0,0,.14);
     --bywa-radius: 26px;
@@ -15,11 +17,11 @@ html { scroll-behavior: smooth; }
 body {
     font-family: 'Inter', sans-serif;
     color: var(--bywa-text);
-    background: #fff;
+    background: #f6f8ff;
 }
 
 a { color: var(--bywa-green); text-decoration: none; }
-a:hover { color: var(--bywa-green-dark); }
+a:hover { color: var(--bywa-accent-dark); }
 
 h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker {
     font-family: 'Barlow Condensed', sans-serif;
@@ -36,12 +38,12 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
     transition: background .25s ease, box-shadow .25s ease;
 }
 .bywa-site-header.is-scrolled {
-    background: rgba(13,24,26,.92);
+    background: rgba(8,22,47,.92);
     box-shadow: 0 8px 25px rgba(0,0,0,.18);
     backdrop-filter: blur(10px);
 }
 .bywa-header-wrap {
-    background: linear-gradient(90deg, rgba(13,24,26,.95), rgba(13,24,26,.72));
+    background: linear-gradient(90deg, rgba(8,22,47,.96), rgba(15,91,216,.78));
     border-bottom: 1px solid rgba(255,255,255,.12);
 }
 .bywa-navbar { min-height: 100px; }
@@ -61,7 +63,7 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
     gap: .35rem;
 }
 .bywa-primary-menu > li > a:hover,
-.bywa-primary-menu > li.current-menu-item > a { color: var(--bywa-green); }
+.bywa-primary-menu > li.current-menu-item > a { color: var(--bywa-accent); }
 .bywa-primary-menu .sub-menu {
     position: absolute;
     top: 100%;
@@ -84,7 +86,7 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
     padding: .65rem 1rem;
     font-size: .98rem;
 }
-.bywa-primary-menu .sub-menu li a:hover { background: rgba(84,185,71,.08); color: var(--bywa-green-dark); }
+.bywa-primary-menu .sub-menu li a:hover { background: rgba(255,210,31,.14); color: var(--bywa-green-dark); }
 .bywa-header-cta {
     margin-left: 1.5rem;
     border: 1px solid rgba(255,255,255,.35);
@@ -96,26 +98,26 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
     min-height: 56px;
     transition: .2s ease;
 }
-.bywa-header-cta .bi { color: var(--bywa-green); }
-.bywa-header-cta:hover { background: rgba(84,185,71,.12); color: #fff; }
+.bywa-header-cta .bi { color: var(--bywa-accent); }
+.bywa-header-cta:hover { background: rgba(255,210,31,.14); color: #fff; }
 
 .navbar-toggler {
-    border-color: rgba(84,185,71,.32);
+    border-color: rgba(255,210,31,.4);
     box-shadow: none;
 }
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 .2rem rgba(84,185,71,.18);
+    box-shadow: 0 0 0 .2rem rgba(255,210,31,.2);
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2354B947' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffd21f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .bywa-hero {
     position: relative;
     min-height: 700px;
-    background: #0a1214;
+    background: linear-gradient(180deg, #08162f 0%, #0a1f45 100%);
     overflow: hidden;
 }
 .bywa-hero-media {
@@ -127,7 +129,7 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
 .bywa-section-kicker,
 .bywa-footer-kicker {
     display: inline-block;
-    color: var(--bywa-green);
+    color: var(--bywa-accent);
     text-transform: uppercase;
     font-size: 1.1rem;
     font-weight: 700;
@@ -170,10 +172,10 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
 .bywa-btn-outline,
 .bywa-btn-outline-dark { border: 1px solid rgba(255,255,255,.4); color: #fff; }
 .bywa-btn-outline:hover { background: rgba(255,255,255,.08); color: #fff; }
-.bywa-btn-outline-dark { color: var(--bywa-text); border-color: rgba(24,36,39,.18); }
-.bywa-btn-outline-dark:hover { background: var(--bywa-text); color: #fff; }
+.bywa-btn-outline-dark { color: var(--bywa-text); border-color: rgba(16,35,63,.18); }
+.bywa-btn-outline-dark:hover { background: var(--bywa-dark); color: #fff; }
 .bywa-hero-points { display: flex; flex-wrap: wrap; gap: 1.2rem; margin-top: 1.75rem; color: #fff; }
-.bywa-hero-points .bi { color: var(--bywa-green); margin-right: .35rem; }
+.bywa-hero-points .bi { color: var(--bywa-accent); margin-right: .35rem; }
 
 .bywa-section { padding: 50px 0; }
 .bywa-section-head { margin-bottom: 3rem; max-width: 760px; }
@@ -189,7 +191,7 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
 /* ===== HERO PAGE / SLIDER ===== */
 .bywa-page-hero {
     position: relative;
-    background: #0a1214;
+    background: linear-gradient(180deg, #08162f 0%, #0a1f45 100%);
     overflow: hidden;
 }
 
@@ -257,8 +259,8 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
 .bywa-hero-overlay--smoke {
     z-index: 2;
     background:
-        linear-gradient(90deg, rgba(6,10,12,.96) 0%, rgba(8,13,15,.88) 24%, rgba(8,13,15,.68) 48%, rgba(8,13,15,.38) 78%, rgba(8,13,15,.18) 100%),
-        linear-gradient(180deg, rgba(7,11,13,.34) 0%, rgba(7,11,13,.12) 32%, rgba(7,11,13,.42) 100%);
+        linear-gradient(90deg, rgba(8,22,47,.96) 0%, rgba(10,31,69,.88) 24%, rgba(10,31,69,.68) 48%, rgba(10,31,69,.38) 78%, rgba(10,31,69,.18) 100%),
+        linear-gradient(180deg, rgba(8,22,47,.34) 0%, rgba(8,22,47,.12) 32%, rgba(8,22,47,.42) 100%);
 }
 
 .bywa-hero-overlay--smoke::before {
@@ -288,9 +290,9 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
 .bywa-hero-overlay--green {
     z-index: 3;
     background:
-        radial-gradient(circle at 72% 26%, rgba(84,185,71,.22), rgba(84,185,71,0) 34%),
-        radial-gradient(circle at 82% 60%, rgba(84,185,71,.12), rgba(84,185,71,0) 26%),
-        linear-gradient(135deg, rgba(84,185,71,.14), rgba(84,185,71,0) 34%);
+        radial-gradient(circle at 72% 26%, rgba(255,210,31,.24), rgba(255,210,31,0) 34%),
+        radial-gradient(circle at 82% 60%, rgba(15,91,216,.18), rgba(15,91,216,0) 26%),
+        linear-gradient(135deg, rgba(255,210,31,.14), rgba(15,91,216,0) 34%);
     opacity: .78;
     animation: bywaHeroGreenPulse 8s ease-in-out infinite;
 }
@@ -1889,7 +1891,248 @@ body.bywa-modal-open .bywa-page-content {
     .bywa-realisation-card--grid,
     .bywa-realisation-card--tiles,
     .bywa-single-realisation__gallery-main-image,
-    .bywa-single-realisation__gallery-thumb-image{
+        .bywa-single-realisation__gallery-thumb-image{
         transition:none !important;
     }
+}
+
+/* ===== MCD ELECTRICIAN BRAND OVERRIDES ===== */
+.bywa-site-header.is-scrolled,
+.bywa-header-wrap,
+.bywa-hero,
+.bywa-page-hero {
+    background-color: var(--bywa-dark);
+}
+
+.bywa-hero,
+.bywa-page-hero {
+    background-image:
+        radial-gradient(circle at 18% 20%, rgba(255,210,31,.16), rgba(255,210,31,0) 26%),
+        radial-gradient(circle at 82% 24%, rgba(15,91,216,.24), rgba(15,91,216,0) 30%),
+        linear-gradient(180deg, #08162f 0%, #0a1f45 100%);
+}
+
+.bywa-hero-overlay--smoke::after {
+    background:
+        radial-gradient(circle at 22% 48%, rgba(8,22,47,.60), rgba(8,22,47,0) 32%),
+        radial-gradient(circle at 12% 78%, rgba(8,22,47,.38), rgba(8,22,47,0) 26%),
+        linear-gradient(90deg, rgba(8,22,47,.22), rgba(8,22,47,0) 55%);
+}
+
+.bywa-hero-overlay--green {
+    background:
+        radial-gradient(circle at 72% 26%, rgba(255,210,31,.26), rgba(255,210,31,0) 34%),
+        radial-gradient(circle at 82% 60%, rgba(15,91,216,.20), rgba(15,91,216,0) 26%),
+        linear-gradient(135deg, rgba(255,210,31,.12), rgba(15,91,216,0) 34%);
+}
+
+.bywa-header-cta,
+.bywa-footer-button,
+.wpcf7 .wpcf7-submit,
+.entry-content .wp-block-button__link,
+.bywa-entry-content .wp-block-button__link,
+.bywa-404 .search-submit {
+    background: linear-gradient(135deg, var(--bywa-green), #1b74ff);
+    border-color: var(--bywa-green);
+}
+
+.bywa-header-cta:hover,
+.bywa-footer-button:hover,
+.wpcf7 .wpcf7-submit:hover,
+.bywa-404 .search-submit:hover {
+    background: linear-gradient(135deg, var(--bywa-green-dark), #0847b2);
+}
+
+.bywa-header-cta .bi,
+.bywa-hero-points .bi,
+.bywa-service-icon,
+.bywa-single-service__icon,
+.bywa-footer-badge,
+.bywa-google-reviews__quote-icon,
+.bywa-team-showcase__more,
+.bywa-404__eyebrow {
+    color: var(--bywa-accent);
+}
+
+.bywa-service-icon,
+.bywa-single-service__icon {
+    background: linear-gradient(135deg, var(--bywa-accent), #ffe778);
+    color: var(--bywa-dark);
+}
+
+.bywa-domain-card::after,
+.bywa-project-city,
+.bywa-404__eyebrow {
+    background: rgba(255,210,31,.16);
+}
+
+.bywa-project-city,
+.bywa-404__eyebrow {
+    color: var(--bywa-green-dark);
+}
+
+.bywa-testimonials,
+.bywa-google-reviews,
+.bywa-team-slider--empty,
+.bywa-final-cta-box,
+.bywa-contact-card,
+.bywa-single-realisation__panel--meta,
+.bywa-single-realisation__cta-box,
+.bywa-single-service__panel--meta,
+.bywa-single-service__cta-box,
+.bywa-404__panel {
+    background: linear-gradient(180deg, #08162f, #0a1f45);
+}
+
+.bywa-testimonial-card,
+.bywa-google-reviews__card,
+.bywa-single-realisation__meta-card,
+.bywa-single-service__meta-card {
+    border-color: rgba(255,210,31,.26);
+}
+
+.bywa-quote-shape,
+.bywa-testimonial-inner span,
+.bywa-google-reviews .bywa-section-kicker,
+.bywa-google-reviews__star.is-active,
+.bywa-google-reviews__inner > span {
+    color: var(--bywa-accent);
+}
+
+.bywa-quote-shape,
+.bywa-testimonial-inner span,
+.bywa-quote-icon {
+    color: var(--bywa-accent);
+}
+
+.bywa-quote-shape::before,
+.bywa-quote-shape::after {
+    background: var(--bywa-accent);
+}
+
+.bywa-team-showcase {
+    background:
+        radial-gradient(circle at top right, rgba(255,210,31,.16), transparent 34%),
+        linear-gradient(180deg, #f5f8ff, #eef4ff);
+}
+
+.bywa-team-showcase__title,
+.bywa-404__title,
+.bywa-single-realisation__title,
+.bywa-single-service__title,
+.bywa-footer-brand h3,
+.bywa-site-footer h4 {
+    color: var(--bywa-dark);
+}
+
+.bywa-team-slider,
+.bywa-team-slider--empty {
+    background: linear-gradient(145deg, #08162f, #0f3f92);
+}
+
+.bywa-team-slider__arrow:hover,
+.bywa-google-reviews__carousel .owl-nav button.owl-prev:hover,
+.bywa-google-reviews__carousel .owl-nav button.owl-next:hover,
+.bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot.active span,
+.bywa-google-reviews__carousel.owl-theme .owl-dots .owl-dot:hover span {
+    background: var(--bywa-accent) !important;
+    border-color: var(--bywa-accent) !important;
+    color: var(--bywa-dark) !important;
+}
+
+.bywa-google-reviews__card,
+.bywa-testimonial-card {
+    background: rgba(8,22,47,.72);
+}
+
+.bywa-service-image,
+.bywa-project-thumb,
+.bywa-about-photo {
+    background-blend-mode: screen, normal;
+}
+
+.bywa-service-image {
+    background:
+        linear-gradient(180deg, rgba(255,210,31,.12), rgba(8,22,47,.18)),
+        url('https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.bywa-project-thumb {
+    background:
+        linear-gradient(180deg, rgba(255,210,31,.12), rgba(8,22,47,.30)),
+        url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.bywa-about-photo {
+    background:
+        linear-gradient(180deg, rgba(255,210,31,.10), rgba(8,22,47,.24)),
+        url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1200&q=80') center/cover;
+}
+
+.bywa-contact-block,
+.bywa-single-realisation,
+.bywa-single-service {
+    background:
+        radial-gradient(circle at top right, rgba(255,210,31,.10), rgba(255,210,31,0) 28%),
+        linear-gradient(180deg, #f5f8ff 0%, #ffffff 36%);
+}
+
+.bywa-contact-card,
+.bywa-single-realisation__panel--meta,
+.bywa-single-service__panel--meta,
+.bywa-single-realisation__cta-box,
+.bywa-single-service__cta-box,
+.bywa-final-cta-box,
+.bywa-404__panel {
+    color: #fff;
+}
+
+.bywa-footer-badge {
+    background: linear-gradient(135deg, var(--bywa-green), #1b74ff);
+}
+
+.bywa-footer-socials a {
+    color: var(--bywa-dark);
+}
+
+.bywa-footer-socials a:hover,
+.bywa-footer-menu a:hover,
+.bywa-footer-legal a:hover,
+.bywa-site-footer li a:hover {
+    color: var(--bywa-accent-dark);
+}
+
+.bywa-site-footer {
+    background: linear-gradient(180deg, #eef4ff 0%, #ffffff 100%);
+}
+
+.bywa-map-fullwidth {
+    background: var(--bywa-dark);
+}
+
+.bywa-404__eyebrow,
+.bywa-project-city {
+    border-left: 0;
+}
+
+.bywa-404__links a:hover {
+    background: rgba(255,210,31,.14);
+}
+
+.bywa-404 .search-field:focus,
+.wpcf7 .wpcf7-form-control:focus,
+.bywa-single-realisation__gallery-main:focus-visible,
+.bywa-single-realisation__gallery-thumb:focus-visible {
+    border-color: var(--bywa-accent);
+    box-shadow: 0 0 0 4px rgba(255,210,31,.18);
+}
+
+.entry-content .wp-block-quote,
+.bywa-entry-content .wp-block-quote {
+    border-left-color: var(--bywa-accent);
+}
+
+.entry-content .wp-block-file__button,
+.bywa-entry-content .wp-block-file__button {
+    background: linear-gradient(135deg, var(--bywa-green), #1b74ff);
 }

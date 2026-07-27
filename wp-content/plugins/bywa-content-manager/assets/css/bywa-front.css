@@ -1,12 +1,13 @@
 :root{
-  --bywa-green:#54B947;
-  --bywa-green-dark:#3e9a33;
-  --bywa-dark:#0d181a;
-  --bywa-dark-soft:#132326;
-  --bywa-text:#182427;
-  --bywa-muted:#708086;
-  --bywa-light:#f4f4f1;
-  --bywa-border:#e9e9e9;
+  --bywa-green:#0f5bd8;
+  --bywa-green-dark:#0b3c99;
+  --bywa-dark:#08162f;
+  --bywa-dark-soft:#103a7b;
+  --bywa-text:#10233f;
+  --bywa-muted:#61708d;
+  --bywa-light:#f4f7ff;
+  --bywa-border:#d9e4f7;
+  --bywa-accent:#ffd21f;
   --bywa-shadow:0 12px 30px rgba(0,0,0,.08);
   --bywa-radius:18px;
   --bywa-container:1280px;
