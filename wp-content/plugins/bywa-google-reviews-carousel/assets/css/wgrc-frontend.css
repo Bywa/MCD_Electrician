@@ -149,6 +149,27 @@
   background:#ffd21f;
 }
 
+/* Typography override: Saira for titles, Nunito Sans for body copy */
+body,
+button,
+input,
+select,
+textarea{
+  font-family:'Nunito Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.bywa-google-reviews .bywa-section-kicker,
+.bywa-google-reviews__quote-icon,
+.bywa-google-reviews__inner h3{
+  font-family:'Saira', sans-serif;
+}
+
 @media (max-width:991.98px){
   .bywa-google-reviews__inner{
     padding:34px 26px;

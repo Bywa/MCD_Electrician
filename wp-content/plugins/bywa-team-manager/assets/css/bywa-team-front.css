@@ -502,3 +502,25 @@
     #fff;
   border:1px solid rgba(255,210,31,.14);
 }
+
+/* Typography override: Saira for titles, Nunito Sans for body copy */
+body,
+button,
+input,
+select,
+textarea{
+  font-family:'Nunito Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.bywa-team-showcase__title,
+.bywa-team-card__name,
+.bywa-team-card__badge,
+.bywa-team-slider__empty strong{
+  font-family:'Saira', sans-serif;
+}

@@ -8,9 +8,9 @@ if (!defined('ABSPATH')) {
         <div class="row g-5 align-items-start">
             <div class="col-lg-5">
                 <div class="bywa-footer-brand">
-                    <?php echo bywa_eco_get_footer_logo_html(); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
+                    <?php echo bywa_eco_get_brand_logo_html('bywa-footer-brand-logo'); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
                     <div>
-                        <p class="bywa-footer-kicker">ECO Electricite</p>
+                        <p class="bywa-footer-kicker">MCD Electrician</p>
                         <h3>Plus qu'un electricien, un partenaire fiable pour vos projets.</h3>
                     </div>
                 </div>
@@ -64,7 +64,7 @@ if (!defined('ABSPATH')) {
     <div class="container bywa-footer-bottom">
         <div class="row gy-3 align-items-center">
             <div class="col-lg-6">
-                <p class="mb-0">&copy; <?php echo esc_html(date_i18n('Y')); ?> ECO Electricite. Tous droits reserves.</p>
+                <p class="mb-0">&copy; <?php echo esc_html(date_i18n('Y')); ?> MCD Electrician. Tous droits reserves.</p>
             </div>
             <div class="col-lg-6">
                 <div class="bywa-footer-legal">

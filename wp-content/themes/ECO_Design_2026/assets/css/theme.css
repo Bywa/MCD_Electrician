@@ -15,7 +15,7 @@
 
 html { scroll-behavior: smooth; }
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
     color: var(--bywa-text);
     background: #f6f8ff;
 }
@@ -24,7 +24,7 @@ a { color: var(--bywa-green); text-decoration: none; }
 a:hover { color: var(--bywa-accent-dark); }
 
 h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker {
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Saira', sans-serif;
     letter-spacing: .02em;
 }
 
@@ -38,22 +38,30 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
     transition: background .25s ease, box-shadow .25s ease;
 }
 .bywa-site-header.is-scrolled {
-    background: rgba(8,22,47,.92);
+    background: rgba(248,250,255,.96);
     box-shadow: 0 8px 25px rgba(0,0,0,.18);
     backdrop-filter: blur(10px);
 }
 .bywa-header-wrap {
-    background: linear-gradient(90deg, rgba(8,22,47,.96), rgba(15,91,216,.78));
-    border-bottom: 1px solid rgba(255,255,255,.12);
+    background: linear-gradient(90deg, rgba(250,252,255,.98), rgba(232,239,250,.94));
+    border-bottom: 1px solid rgba(8,22,47,.08);
+    box-shadow: 0 10px 24px rgba(8,22,47,.06);
 }
 .bywa-navbar { min-height: 100px; }
 .bywa-navbar-inner { min-height: 100px; }
-.bywa-brand img { max-height: 56px; width: auto; }
-.bywa-brand-text { color: #fff; font-size: 2rem; text-transform: uppercase; }
+.bywa-brand img,
+.bywa-site-brand-logo {
+    width: clamp(190px, 18vw, 260px);
+    height: 92px;
+    max-width: none;
+    object-fit: cover;
+    object-position: center top;
+}
+.bywa-brand-text { color: var(--bywa-dark); font-size: 2rem; text-transform: uppercase; }
 .bywa-primary-menu { gap: 1rem; }
 .bywa-primary-menu > li { position: relative; list-style: none; }
 .bywa-primary-menu > li > a {
-    color: #fff;
+    color: var(--bywa-dark);
     text-transform: uppercase;
     font-size: 1.15rem;
     font-weight: 600;
@@ -63,7 +71,7 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
     gap: .35rem;
 }
 .bywa-primary-menu > li > a:hover,
-.bywa-primary-menu > li.current-menu-item > a { color: var(--bywa-accent); }
+.bywa-primary-menu > li.current-menu-item > a { color: var(--bywa-green); }
 .bywa-primary-menu .sub-menu {
     position: absolute;
     top: 100%;
@@ -89,29 +97,30 @@ h1, h2, h3, h4, h5, .bywa-brand-text, .bywa-section-kicker, .bywa-footer-kicker 
 .bywa-primary-menu .sub-menu li a:hover { background: rgba(255,210,31,.14); color: var(--bywa-green-dark); }
 .bywa-header-cta {
     margin-left: 1.5rem;
-    border: 1px solid rgba(255,255,255,.35);
+    border: 1px solid rgba(8,22,47,.12);
     color: #fff;
     display: inline-flex;
     align-items: center;
     gap: .75rem;
     padding: 1rem 1.4rem;
     min-height: 56px;
+    background: linear-gradient(135deg, var(--bywa-dark), #0f3f92);
     transition: .2s ease;
 }
 .bywa-header-cta .bi { color: var(--bywa-accent); }
-.bywa-header-cta:hover { background: rgba(255,210,31,.14); color: #fff; }
+.bywa-header-cta:hover { background: linear-gradient(135deg, #0f3f92, var(--bywa-green)); color: #fff; }
 
 .navbar-toggler {
-    border-color: rgba(255,210,31,.4);
+    border-color: rgba(8,22,47,.18);
     box-shadow: none;
 }
 
 .navbar-toggler:focus {
-    box-shadow: 0 0 0 .2rem rgba(255,210,31,.2);
+    box-shadow: 0 0 0 .2rem rgba(15,91,216,.18);
 }
 
 .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23ffd21f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%2308162f' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .bywa-hero {
@@ -813,7 +822,7 @@ body.bywa-modal-open .bywa-page-content {
     position: absolute;
     right: 30px;
     bottom: 24px;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Saira', sans-serif;
     font-size: 5rem;
     color: rgba(255,255,255,.9);
     z-index: 2;
@@ -869,7 +878,7 @@ body.bywa-modal-open .bywa-page-content {
     color: var(--bywa-green);
     font-size: 5.5rem;
     line-height: 1;
-    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Saira', sans-serif;
 }
 .bywa-testimonial-inner p { font-size: 1.18rem; line-height: 1.8; margin: 1rem 0 2rem; }
 .bywa-testimonial-inner h3 { font-size: 2rem; margin-bottom: .25rem; }
@@ -915,7 +924,7 @@ body.bywa-modal-open .bywa-page-content {
     margin: 2rem 0;
 }
 .bywa-about-list div { background: #fff; padding: 1.25rem; border-radius: 20px; }
-.bywa-about-list strong { display: block; font-size: 2rem; font-family: 'Barlow Condensed', sans-serif; }
+.bywa-about-list strong { display: block; font-size: 2rem; font-family: 'Saira', sans-serif; }
 .bywa-about-list span { color: var(--bywa-muted); }
 .bywa-about-visual { position: relative; min-height: 540px; }
 .bywa-about-photo {
@@ -1168,18 +1177,25 @@ body.bywa-modal-open .bywa-page-content {
 .bywa-footer-top { padding-bottom: 60px; }
 .bywa-footer-brand { display: flex; gap: 1rem; align-items: center; margin-bottom: 1.2rem; }
 .bywa-footer-badge {
-    width: 88px; height: 88px; border-radius: 20px;
-    background: #17363a; color: #cfff73; display: flex; align-items: center; justify-content: center; font-size: 2rem;
+    width: 150px;
+    height: 110px;
+    border-radius: 18px;
+    background: transparent;
+    color: #cfff73;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
 }
 .bywa-footer-brand-logo {
-    width: 88px;
-    height: 88px;
-    object-fit: contain;
-    object-position: center;
-    border-radius: 20px;
-    background: #fff;
-    padding: 10px;
-    box-shadow: 0 10px 22px rgba(0,0,0,.06);
+    width: 150px;
+    height: 110px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 0;
+    background: transparent;
+    padding: 0;
+    box-shadow: none;
 }
 .bywa-footer-brand h3 { font-size: 2.4rem; margin: 0; max-width: 380px; }
 .bywa-footer-text { color: #58666a; max-width: 560px; line-height: 1.8; }
@@ -1898,10 +1914,8 @@ body.bywa-modal-open .bywa-page-content {
 
 /* ===== MCD ELECTRICIAN BRAND OVERRIDES ===== */
 .bywa-site-header.is-scrolled,
-.bywa-header-wrap,
-.bywa-hero,
-.bywa-page-hero {
-    background-color: var(--bywa-dark);
+.bywa-header-wrap {
+    background-color: rgba(250,252,255,.96);
 }
 
 .bywa-hero,
@@ -2153,4 +2167,32 @@ body.bywa-modal-open .bywa-page-content {
 .entry-content .wp-block-file__button,
 .bywa-entry-content .wp-block-file__button {
     background: linear-gradient(135deg, var(--bywa-green), #1b74ff);
+}
+
+/* Typography override: Saira for titles, Nunito Sans for body copy */
+body,
+button,
+input,
+select,
+textarea {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.bywa-brand-text,
+.bywa-section-kicker,
+.bywa-footer-kicker,
+.bywa-domain-number,
+.bywa-quote-icon,
+.bywa-about-list strong,
+.bywa-footer-brand h3,
+.bywa-404__title,
+.bywa-single-realisation__title,
+.bywa-single-service__title {
+    font-family: 'Saira', sans-serif;
 }

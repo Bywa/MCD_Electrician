@@ -16,6 +16,7 @@ add_action('send_headers', function() {
 function action_if_theme_setup() {
     add_action('after_setup_theme', 'bywa_eco_setup');
     add_action('wp_enqueue_scripts', 'bywa_eco_enqueue_assets');
+    add_action('wp_head', 'bywa_eco_output_brand_icons', 1);
     add_action('customize_register', 'bywa_eco_customize_register');
     add_filter('document_title_parts', 'bywa_eco_filter_document_title_parts');
 
@@ -43,7 +44,7 @@ function bywa_eco_setup() {
 }
 
 function bywa_eco_enqueue_assets() {
-    wp_enqueue_style('bywa-google-fonts', 'https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap', array(), null);
+    wp_enqueue_style('bywa-google-fonts', 'https://fonts.googleapis.com/css2?family=Saira:wght@400;500;600;700;800&family=Nunito+Sans:wght@400;500;600;700;800&display=swap', array(), null);
     wp_enqueue_style('bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css', array(), '5.3.3');
     wp_enqueue_style('bootstrap-icons', 'https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css', array(), '1.11.3');
     wp_enqueue_style('bywa-eco-style', get_template_directory_uri() . '/assets/css/theme.css', array('bootstrap'), BYWA_ECO_THEME_VERSION);
@@ -78,6 +79,47 @@ function bywa_eco_admin_enqueue_assets($hook) {
         array(),
         BYWA_ECO_THEME_VERSION
     );
+}
+
+function bywa_eco_get_brand_logo_path() {
+    return trailingslashit(get_template_directory()) . 'assets/images/MCD_LOGO.webp';
+}
+
+function bywa_eco_get_brand_logo_url() {
+    $logo_path = bywa_eco_get_brand_logo_path();
+
+    if (!file_exists($logo_path)) {
+        return '';
+    }
+
+    return trailingslashit(get_template_directory_uri()) . 'assets/images/MCD_LOGO.webp';
+}
+
+function bywa_eco_get_brand_logo_html($class = 'bywa-site-brand-logo') {
+    $logo_url = bywa_eco_get_brand_logo_url();
+
+    if ($logo_url !== '') {
+        return sprintf(
+            '<img src="%1$s" alt="%2$s" class="%3$s" loading="eager" decoding="async">',
+            esc_url($logo_url),
+            esc_attr__('MCD Electrician', 'eco-design-2026'),
+            esc_attr($class)
+        );
+    }
+
+    return '<span class="bywa-brand-text">MCD Electrician</span>';
+}
+
+function bywa_eco_output_brand_icons() {
+    $logo_url = bywa_eco_get_brand_logo_url();
+
+    if ($logo_url === '') {
+        return;
+    }
+
+    echo '<link rel="icon" href="' . esc_url($logo_url) . '" type="image/webp" sizes="any">' . "\n";
+    echo '<link rel="shortcut icon" href="' . esc_url($logo_url) . '" type="image/webp">' . "\n";
+    echo '<link rel="apple-touch-icon" href="' . esc_url($logo_url) . '">' . "\n";
 }
 
 function bywa_eco_customize_register($wp_customize) {
@@ -235,19 +277,10 @@ function bywa_eco_sanitize_footer_logo($value) {
 }
 
 function bywa_eco_get_footer_logo_html() {
-    $logo_value = trim((string) get_theme_mod('bywa_eco_footer_logo_id', ''));
+    $brand_logo = bywa_eco_get_brand_logo_html('bywa-footer-brand-logo');
 
-    if ($logo_value !== '' && $logo_value !== '0') {
-        $logo_id = attachment_url_to_postid($logo_value);
-
-        if ($logo_id > 0) {
-            return wp_get_attachment_image($logo_id, 'medium', false, array(
-                'class' => 'bywa-footer-brand-logo',
-                'loading' => 'lazy',
-            ));
-        }
-
-        return '<img src="' . esc_url($logo_value) . '" alt="' . esc_attr__('ECO Electricite', 'eco-design-2026') . '" class="bywa-footer-brand-logo" loading="lazy">';
+    if (strpos($brand_logo, '<img ') === 0) {
+        return $brand_logo;
     }
 
     return '<span class="bywa-footer-badge"><i class="bi bi-lightning-charge-fill" aria-hidden="true"></i></span>';

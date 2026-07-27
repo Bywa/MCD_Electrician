@@ -1903,3 +1903,36 @@ body.bywa-modal-open{
   color:#fff;
   background:linear-gradient(135deg, var(--bywa-green), #1b74ff);
 }
+
+/* Typography override: Saira for titles, Nunito Sans for body copy */
+body,
+button,
+input,
+select,
+textarea{
+  font-family:'Nunito Sans', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.bywa-card__title,
+.bywa-service-card__title,
+.bywa-service-showcase-card__title,
+.bywa-domaine-card__title,
+.bywa-project-body h3,
+.bywa-realisation-list-card__title,
+.bywa-realisation-compact-card__title,
+.bywa-team-card__name,
+.bywa-team-showcase__title,
+.bywa-google-reviews__inner h3,
+.bywa-single-realisation__title,
+.bywa-single-service__title,
+.bywa-footer-brand h3,
+.bywa-domain-number,
+.bywa-quote-icon{
+  font-family:'Saira', sans-serif;
+}
