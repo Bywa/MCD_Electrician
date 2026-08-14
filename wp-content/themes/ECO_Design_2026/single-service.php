@@ -15,7 +15,7 @@ get_header();
         $service_icon = get_post_meta($post_id, '_bywa_service_icon', true);
         $service_short_text = get_post_meta($post_id, '_bywa_service_short_text', true);
         $service_groups = get_the_terms($post_id, 'service_group');
-        $cta_label = bywa_eco_get_theme_mod('bywa_eco_cta_label', 'Demander un devis');
+        $cta_label = bywa_eco_get_theme_mod('bywa_eco_cta_label', 'Cere o ofertă');
         $cta_url = bywa_eco_get_contact_url();
         $company_phone = bywa_eco_get_contact_phone();
         $company_phone_secondary = bywa_eco_get_contact_phone_secondary();
@@ -40,11 +40,11 @@ get_header();
                                     <?php
                                     bywa_eco_render_breadcrumbs(array(
                                         array(
-                                            'label' => __('Accueil', 'eco-design-2026'),
+                                            'label' => __('Acasă', 'eco-design-2026'),
                                             'url'   => home_url('/'),
                                         ),
                                         array(
-                                            'label' => __('Services', 'eco-design-2026'),
+                                            'label' => __('Servicii', 'eco-design-2026'),
                                             'url'   => get_post_type_archive_link('service'),
                                         ),
                                         array(
@@ -55,7 +55,7 @@ get_header();
                                     ?>
                                     <div class="bywa-single-service__badge-wrap">
                                         <span class="bywa-single-service__icon"><i class="bi <?php echo esc_attr($service_icon); ?>"></i></span>
-                                        <span class="bywa-section-kicker">Service</span>
+                                        <span class="bywa-section-kicker">Serviciu</span>
                                     </div>
 
                                     <h1 class="bywa-single-service__title"><?php the_title(); ?></h1>
@@ -88,20 +88,20 @@ get_header();
                                     <aside class="bywa-single-service__panel bywa-single-service__panel--meta bywa-reveal">
                                         <div class="bywa-single-service__meta-grid">
                                             <div class="bywa-single-service__meta-card">
-                                                <span class="bywa-single-service__meta-label">Intervention</span>
-                                                <strong>Étude, réalisation et accompagnement</strong>
+                                                <span class="bywa-single-service__meta-label">Intervenție</span>
+                                                <strong>Analiză, execuție și suport</strong>
                                             </div>
 
                                             <?php if (!empty($service_groups) && !is_wp_error($service_groups)) : ?>
                                                 <div class="bywa-single-service__meta-card">
-                                                    <span class="bywa-single-service__meta-label">Catégorie</span>
+                                                    <span class="bywa-single-service__meta-label">Categorie</span>
                                                     <strong><?php echo esc_html(implode(', ', wp_list_pluck($service_groups, 'name'))); ?></strong>
                                                 </div>
                                             <?php endif; ?>
 
                                             <div class="bywa-single-service__meta-card">
-                                                <span class="bywa-single-service__meta-label">Zone</span>
-                                                <strong>Jura bernois, Bienne et région</strong>
+                                                <span class="bywa-single-service__meta-label">Zonă</span>
+                                                <strong>Jura bernois, Bienne și regiunea</strong>
                                             </div>
                                         </div>
                                     </aside>
@@ -113,9 +113,9 @@ get_header();
                     <section class="bywa-single-service__cta bywa-reveal">
                         <div class="bywa-single-service__cta-box">
                             <div class="bywa-single-service__cta-content">
-                                <span class="bywa-section-kicker">Passer à l’action</span>
-                                <h2>Besoin d’un accompagnement pour ce service ?</h2>
-                                <p>Présentez votre besoin et obtenez rapidement une proposition claire, adaptée à votre bâtiment et à votre budget.</p>
+                                <span class="bywa-section-kicker">Treci la acțiune</span>
+                                <h2>Ai nevoie de sprijin pentru acest serviciu?</h2>
+                                <p>Spune-ne ce ai nevoie și primești rapid o propunere clară, adaptată clădirii și bugetului tău.</p>
                             </div>
 
                             <div class="bywa-single-service__cta-actions">

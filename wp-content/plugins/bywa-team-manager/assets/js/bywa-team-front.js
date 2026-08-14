@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     toggle.addEventListener('click', () => {
       const isExpanded = description.classList.toggle('is-expanded');
-      toggle.textContent = isExpanded ? 'Voir moins' : 'Voir plus';
+      toggle.textContent = isExpanded ? 'Vezi mai puțin' : 'Vezi mai mult';
     });
 
     updateToggleVisibility();

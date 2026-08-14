@@ -324,7 +324,7 @@ function bywa_eco_get_footer_social_links() {
         $socials[] = array(
             'icon'  => bywa_eco_normalize_bootstrap_icon_class($icon, $defaults[$i]),
             'url'   => $url,
-            'label' => $labels[$i] ?? __('Réseau social', 'eco-design-2026'),
+            'label' => $labels[$i] ?? __('Rețea socială', 'eco-design-2026'),
         );
     }
 
@@ -333,8 +333,8 @@ function bywa_eco_get_footer_social_links() {
 
 function bywa_eco_get_archive_hero_label($post_type) {
     $labels = array(
-        'service'     => __('Services', 'eco-design-2026'),
-        'realisation' => __('Réalisations', 'eco-design-2026'),
+        'service'     => __('Servicii', 'eco-design-2026'),
+        'realisation' => __('Lucrări', 'eco-design-2026'),
     );
 
     if (isset($labels[$post_type])) {
@@ -437,10 +437,10 @@ function bywa_eco_normalize_bootstrap_icon_class($icon, $default = 'bi-link-45de
 
 function bywa_eco_primary_fallback() {
     echo '<ul class="navbar-nav ms-auto align-items-xl-center bywa-primary-menu">';
-    echo '<li class="menu-item current-menu-item"><a href="' . esc_url(home_url('/')) . '">Accueil</a></li>';
-    echo '<li class="menu-item"><a href="' . esc_url(home_url('/services')) . '">Services</a></li>';
-    echo '<li class="menu-item"><a href="' . esc_url(home_url('/realisations')) . '">Realisations</a></li>';
-    echo '<li class="menu-item"><a href="' . esc_url(home_url('/entreprise')) . '">Entreprise</a></li>';
+    echo '<li class="menu-item current-menu-item"><a href="' . esc_url(home_url('/')) . '">Acasă</a></li>';
+    echo '<li class="menu-item"><a href="' . esc_url(home_url('/services')) . '">Servicii</a></li>';
+    echo '<li class="menu-item"><a href="' . esc_url(home_url('/realisations')) . '">Lucrări</a></li>';
+    echo '<li class="menu-item"><a href="' . esc_url(home_url('/entreprise')) . '">Companie</a></li>';
     echo '<li class="menu-item"><a href="' . esc_url(home_url('/contact/')) . '">Contact</a></li>';
     echo '</ul>';
 }
@@ -720,7 +720,7 @@ function bywa_eco_render_breadcrumbs($items = array()) {
         return;
     }
 
-    echo '<nav class="bywa-breadcrumbs" aria-label="' . esc_attr__('Fil d’Ariane', 'eco-design-2026') . '">';
+    echo '<nav class="bywa-breadcrumbs" aria-label="' . esc_attr__('Fir de navigare', 'eco-design-2026') . '">';
     echo '<ol class="bywa-breadcrumbs__list">';
 
     $last_index = count($items) - 1;

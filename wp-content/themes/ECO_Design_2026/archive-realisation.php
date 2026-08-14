@@ -27,7 +27,7 @@ $archive_hero = bywa_eco_get_archive_hero_data('realisation');
                     <?php
                     bywa_eco_render_breadcrumbs(array(
                         array(
-                            'label' => __('Accueil', 'eco-design-2026'),
+                            'label' => __('Acasă', 'eco-design-2026'),
                             'url'   => home_url('/'),
                         ),
                         array(

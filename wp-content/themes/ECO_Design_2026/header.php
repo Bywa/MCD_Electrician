@@ -36,7 +36,7 @@ if (!defined('ABSPATH')) {
 
                     <a class="bywa-header-cta" href="<?php echo esc_url(bywa_eco_get_contact_url()); ?>">
                         <span class="bi bi-arrow-up-right"></span>
-                        <?php echo esc_html(bywa_eco_get_theme_mod('bywa_eco_cta_label', 'Demander un devis')); ?>
+                        <?php echo esc_html(bywa_eco_get_theme_mod('bywa_eco_cta_label', 'Cere o ofertă')); ?>
                     </a>
                 </div>
             </div>

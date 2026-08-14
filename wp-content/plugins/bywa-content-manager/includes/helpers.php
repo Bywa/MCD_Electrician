@@ -22,7 +22,7 @@ function bywa_csv_to_array($value, $type = 'string') {
 /**
  * Rend un bouton standard Bywa.
  */
-function bywa_render_button($url, $label = 'Voir plus', $class = '') {
+function bywa_render_button($url, $label = 'Vezi mai mult', $class = '') {
     $url   = esc_url($url);
     $label = esc_html($label);
     $class = esc_attr(trim($class));

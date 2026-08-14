@@ -97,7 +97,7 @@ function bywa_domaines_shortcode($atts) {
         }
 
         if (empty($link_label)) {
-            $link_label = 'Lire plus';
+            $link_label = 'Citește mai mult';
         }
 
         $number = str_pad((string) $index, 2, '0', STR_PAD_LEFT);

@@ -76,7 +76,7 @@ function bywa_tm_team_member_photos_enabled($post_id) {
 
 function bywa_tm_get_team_presentation($post_id) {
     $defaults = array(
-        'kicker'       => 'Entreprise',
+        'kicker'       => 'Echipă',
         'button_label' => '',
         'button_url'   => '',
         'gallery_ids'  => array(),
@@ -108,6 +108,6 @@ function bywa_tm_get_team_summary($post_id) {
     return array(
         'members' => $members,
         'count'   => $count,
-        'label'   => sprintf(_n('%s personne', '%s personnes', $count, 'bywa-team-manager'), number_format_i18n($count)),
+        'label'   => sprintf(_n('%s persoană', '%s persoane', $count, 'bywa-team-manager'), number_format_i18n($count)),
     );
 }

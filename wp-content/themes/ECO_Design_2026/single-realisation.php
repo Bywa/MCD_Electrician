@@ -18,7 +18,7 @@ get_header();
         $project_date = get_post_meta($post_id, '_bywa_realisation_date', true);
         $gallery_ids = function_exists('bywa_get_realisation_gallery_ids') ? bywa_get_realisation_gallery_ids($post_id) : array();
         $types = get_the_terms($post_id, 'type_realisation');
-        $cta_label = bywa_eco_get_theme_mod('bywa_eco_cta_label', 'Demander un devis');
+        $cta_label = bywa_eco_get_theme_mod('bywa_eco_cta_label', 'Cere o ofertă');
         $cta_url = bywa_eco_get_contact_url();
         $company_phone = bywa_eco_get_contact_phone();
         $company_phone_secondary = bywa_eco_get_contact_phone_secondary();
@@ -43,11 +43,11 @@ get_header();
                                     <?php
                                     bywa_eco_render_breadcrumbs(array(
                                         array(
-                                            'label' => __('Accueil', 'eco-design-2026'),
+                                            'label' => __('Acasă', 'eco-design-2026'),
                                             'url'   => home_url('/'),
                                         ),
                                         array(
-                                            'label' => __('Réalisations', 'eco-design-2026'),
+                                            'label' => __('Lucrări', 'eco-design-2026'),
                                             'url'   => get_post_type_archive_link('realisation'),
                                         ),
                                         array(
@@ -56,7 +56,7 @@ get_header();
                                         ),
                                     ));
                                     ?>
-                                    <span class="bywa-section-kicker">Réalisation</span>
+                                    <span class="bywa-section-kicker">Lucrare</span>
                                     <h1 class="bywa-single-realisation__title"><?php the_title(); ?></h1>
 
                                     <?php if (has_excerpt()) : ?>
@@ -74,14 +74,14 @@ get_header();
                                     <div class="bywa-single-realisation__meta-grid">
                                         <?php if (!empty($location)) : ?>
                                             <div class="bywa-single-realisation__meta-card">
-                                                <span class="bywa-single-realisation__meta-label">Lieu</span>
+                                                <span class="bywa-single-realisation__meta-label">Loc</span>
                                                 <strong><?php echo esc_html($location); ?></strong>
                                             </div>
                                         <?php endif; ?>
 
                                         <?php if (!empty($project_date)) : ?>
                                             <div class="bywa-single-realisation__meta-card">
-                                                <span class="bywa-single-realisation__meta-label">Date</span>
+                                                <span class="bywa-single-realisation__meta-label">Dată</span>
                                                 <strong><?php echo esc_html($project_date); ?></strong>
                                             </div>
                                         <?php endif; ?>
@@ -95,14 +95,14 @@ get_header();
 
                                         <?php if (!empty($architecte)) : ?>
                                             <div class="bywa-single-realisation__meta-card">
-                                                <span class="bywa-single-realisation__meta-label">Architecte</span>
+                                                <span class="bywa-single-realisation__meta-label">Arhitect</span>
                                                 <strong><?php echo esc_html($architecte); ?></strong>
                                             </div>
                                         <?php endif; ?>
 
                                         <?php if (!empty($types) && !is_wp_error($types)) : ?>
                                             <div class="bywa-single-realisation__meta-card">
-                                                <span class="bywa-single-realisation__meta-label">Type</span>
+                                                <span class="bywa-single-realisation__meta-label">Tip</span>
                                                 <strong><?php echo esc_html(implode(', ', wp_list_pluck($types, 'name'))); ?></strong>
                                             </div>
                                         <?php endif; ?>
@@ -115,9 +115,9 @@ get_header();
                     <section class="bywa-single-realisation__cta bywa-reveal">
                         <div class="bywa-single-realisation__cta-box">
                             <div class="bywa-single-realisation__cta-content">
-                                <span class="bywa-section-kicker">Votre projet</span>
-                                <h2>Un projet similaire pour votre bâtiment ?</h2>
-                                <p>Expliquez votre besoin et recevez un devis clair pour vos travaux d’électricité, rénovation ou photovoltaïque.</p>
+                                <span class="bywa-section-kicker">Proiectul tău</span>
+                                <h2>Ai un proiect similar pentru clădirea ta?</h2>
+                                <p>Spune-ne ce ai nevoie și primești rapid o ofertă clară pentru lucrări de electricitate, renovare sau fotovoltaic.</p>
                             </div>
 
                             <div class="bywa-single-realisation__cta-actions">
@@ -159,7 +159,7 @@ get_header();
                         <section class="bywa-single-realisation__gallery bywa-reveal">
                             <div class="bywa-single-realisation__gallery-head">
                                 <span class="bywa-section-kicker">Galerie</span>
-                                <h2>Images du chantier</h2>
+                                <h2>Imagini de pe șantier</h2>
                             </div>
 
                             <div class="bywa-single-realisation__gallery-layout">
@@ -188,9 +188,9 @@ get_header();
                         </section>
 
                         <div class="bywa-media-modal" data-bywa-media-modal hidden aria-hidden="true">
-                            <button type="button" class="bywa-media-modal__backdrop" data-bywa-modal-close aria-label="<?php echo esc_attr__('Fermer la fenêtre', 'eco-design-2026'); ?>"></button>
-                            <div class="bywa-media-modal__dialog" role="dialog" aria-modal="true" aria-label="<?php echo esc_attr__('Image agrandie', 'eco-design-2026'); ?>">
-                                <button type="button" class="bywa-media-modal__close" data-bywa-modal-close aria-label="<?php echo esc_attr__('Fermer la fenêtre', 'eco-design-2026'); ?>">
+                            <button type="button" class="bywa-media-modal__backdrop" data-bywa-modal-close aria-label="<?php echo esc_attr__('Închide fereastra', 'eco-design-2026'); ?>"></button>
+                            <div class="bywa-media-modal__dialog" role="dialog" aria-modal="true" aria-label="<?php echo esc_attr__('Imagine mărită', 'eco-design-2026'); ?>">
+                                <button type="button" class="bywa-media-modal__close" data-bywa-modal-close aria-label="<?php echo esc_attr__('Închide fereastra', 'eco-design-2026'); ?>">
                                     <span class="bi bi-x-lg" aria-hidden="true"></span>
                                 </button>
                                 <img class="bywa-media-modal__image" data-bywa-modal-image-target src="" alt="">

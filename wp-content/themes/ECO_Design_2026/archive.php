@@ -16,7 +16,7 @@ get_header();
                     </article>
                 </div>
             <?php endwhile; else : ?>
-                <p><?php echo esc_html__('Aucun contenu.', 'eco-design-2026'); ?></p>
+                <p><?php echo esc_html__('Niciun conținut.', 'eco-design-2026'); ?></p>
             <?php endif; ?>
         </div>
     </div>

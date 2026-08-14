@@ -7,7 +7,7 @@
                 <div class="entry-content"><?php the_content(); ?></div>
             </article>
         <?php endwhile; else : ?>
-            <p>Aucun contenu.</p>
+            <p>Niciun conținut.</p>
         <?php endif; ?>
     </div>
 </main>

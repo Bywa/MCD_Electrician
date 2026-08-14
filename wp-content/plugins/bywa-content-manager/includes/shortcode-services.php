@@ -131,7 +131,7 @@ function bywa_services_shortcode($atts) {
                 echo '</div>';
 
                 echo '<div class="bywa-service-showcase-card__content">';
-                    echo '<span class="bywa-service-showcase-card__eyebrow">Service</span>';
+                    echo '<span class="bywa-service-showcase-card__eyebrow">Serviciu</span>';
                     echo '<h3 class="bywa-card__title">' . esc_html($title) . '</h3>';
 
                     if (!empty($content_preview)) {
@@ -139,7 +139,7 @@ function bywa_services_shortcode($atts) {
                     }
 
                     echo '<div class="bywa-service-showcase-card__footer">';
-                        echo '<a href="' . esc_url($permalink) . '" class="bywa-read-more">Découvrir le service <span class="bi bi-arrow-up-right"></span></a>';
+                        echo '<a href="' . esc_url($permalink) . '" class="bywa-read-more">Descoperă serviciul <span class="bi bi-arrow-up-right"></span></a>';
                     echo '</div>';
                 echo '</div>';
             echo '</article>';
@@ -154,7 +154,7 @@ function bywa_services_shortcode($atts) {
                     if (!empty($service_excerpt)) {
                         echo '<p class="bywa-card__excerpt">' . esc_html($service_excerpt) . '</p>';
                     }
-                    echo bywa_render_button($permalink, 'Voir plus');
+                    echo bywa_render_button($permalink, 'Vezi mai mult');
                 echo '</div>';
             echo '</article>';
         }
@@ -167,7 +167,7 @@ function bywa_services_shortcode($atts) {
                     if (!empty($service_excerpt)) {
                         echo '<p class="bywa-card__excerpt">' . esc_html($service_excerpt) . '</p>';
                     }
-                    echo bywa_render_button($permalink, 'Voir plus');
+                    echo bywa_render_button($permalink, 'Vezi mai mult');
                 echo '</div>';
             echo '</article>';
         }
@@ -180,7 +180,7 @@ function bywa_services_shortcode($atts) {
                     if (!empty($service_excerpt)) {
                         echo '<p class="bywa-card__excerpt">' . esc_html($service_excerpt) . '</p>';
                     }
-                    echo bywa_render_button($permalink, 'Découvrir le service');
+                    echo bywa_render_button($permalink, 'Descoperă serviciul');
                 echo '</div>';
             echo '</article>';
         }
@@ -201,7 +201,7 @@ function bywa_services_shortcode($atts) {
                         if (!empty($service_excerpt)) {
                             echo '<p class="bywa-card__excerpt">' . esc_html($service_excerpt) . '</p>';
                         }
-                        echo '<span class="bywa-readmore">Voir plus <i class="bi bi-arrow-up-right"></i></span>';
+                        echo '<span class="bywa-readmore">Vezi mai mult <i class="bi bi-arrow-up-right"></i></span>';
                     echo '</div>';
                 echo '</a>';
             echo '</article>';

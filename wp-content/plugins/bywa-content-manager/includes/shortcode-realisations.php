@@ -299,9 +299,9 @@ function bywa_realisations_build_pagination_html($current_page, $max_pages) {
 
     ob_start();
     ?>
-    <nav class="bywa-realisations__pagination" aria-label="<?php esc_attr_e('Pagination des réalisations', 'bywa-content-manager'); ?>">
+    <nav class="bywa-realisations__pagination" aria-label="<?php esc_attr_e('Paginarea lucrărilor', 'bywa-content-manager'); ?>">
         <button type="button" class="bywa-realisations__page-btn" data-bywa-realisations-page="<?php echo esc_attr(max(1, $current_page - 1)); ?>" <?php disabled($current_page <= 1); ?>>
-            <?php esc_html_e('Précédent', 'bywa-content-manager'); ?>
+            <?php esc_html_e('Anterior', 'bywa-content-manager'); ?>
         </button>
 
         <div class="bywa-realisations__pages">
@@ -317,7 +317,7 @@ function bywa_realisations_build_pagination_html($current_page, $max_pages) {
         </div>
 
         <button type="button" class="bywa-realisations__page-btn" data-bywa-realisations-page="<?php echo esc_attr(min($max_pages, $current_page + 1)); ?>" <?php disabled($current_page >= $max_pages); ?>>
-            <?php esc_html_e('Suivant', 'bywa-content-manager'); ?>
+            <?php esc_html_e('Următorul', 'bywa-content-manager'); ?>
         </button>
     </nav>
     <?php
@@ -329,7 +329,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
     $per_page = bywa_realisations_normalize_per_page($per_page, 10);
     $gallery_limit = max(1, intval($atts['gallery_limit'] ?? 4));
     $excerpt_length = max(40, intval($atts['excerpt_length'] ?? 220));
-    $link_label = !empty($atts['link_label']) ? sanitize_text_field($atts['link_label']) : 'Voir la réalisation';
+    $link_label = !empty($atts['link_label']) ? sanitize_text_field($atts['link_label']) : 'Vezi lucrarea';
     $allowed_views = array('list', 'grid', 'simple');
     $view = in_array($view, $allowed_views, true) ? $view : 'list';
     $query = new WP_Query(bywa_realisations_get_query_args($atts, $paged, $per_page, $type_filter));
@@ -338,7 +338,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
         wp_reset_postdata();
 
         return array(
-            'items_html'      => '<div class="bywa-realisations bywa-realisations--' . esc_attr($view) . '"><div class="bywa-realisations__empty"><p>Aucune réalisation trouvée.</p></div></div>',
+            'items_html'      => '<div class="bywa-realisations bywa-realisations--' . esc_attr($view) . '"><div class="bywa-realisations__empty"><p>Nicio lucrare găsită.</p></div></div>',
             'pagination_html' => '',
             'max_pages'       => 0,
             'found_posts'     => 0,
@@ -375,7 +375,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
                 if (!empty($terms) && !is_wp_error($terms)) {
                     $location = $terms[0]->name;
                 } else {
-                    $location = 'Réalisation';
+                    $location = 'Lucrare';
                 }
             }
 
@@ -390,7 +390,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
                     echo '<a class="bywa-realisation-compact-card__link" href="' . esc_url($permalink) . '">';
                         echo '<div class="bywa-realisation-compact-card__media">' . $cover_html . '</div>';
                         echo '<div class="bywa-realisation-compact-card__content">';
-                            echo '<span class="bywa-realisation-compact-card__eyebrow">' . esc_html__('Réalisation locale', 'bywa-content-manager') . '</span>';
+                            echo '<span class="bywa-realisation-compact-card__eyebrow">' . esc_html__('Lucrare locală', 'bywa-content-manager') . '</span>';
                             echo '<span class="bywa-project-city">' . esc_html($location) . '</span>';
                             if (!empty($meta_label)) {
                                 echo '<span class="bywa-realisation-compact-card__meta-chip">' . esc_html($meta_label) . '</span>';
@@ -408,7 +408,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
 
                 echo '<article class="bywa-realisation-simple-card bywa-reveal">';
                     echo '<div class="bywa-realisation-simple-card__content">';
-                        echo '<span class="bywa-realisation-simple-card__eyebrow">' . esc_html__('Réalisation locale', 'bywa-content-manager') . '</span>';
+                        echo '<span class="bywa-realisation-simple-card__eyebrow">' . esc_html__('Lucrare locală', 'bywa-content-manager') . '</span>';
                         echo '<div class="bywa-realisation-simple-card__meta-row">';
                             echo '<span class="bywa-project-city">' . esc_html($location) . '</span>';
                             if (!empty($meta_label)) {
@@ -431,7 +431,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
 
                 echo '<article class="' . esc_attr($card_classes) . '">';
                     echo '<div class="bywa-realisation-list-card__media-wrap">';
-                        echo '<button type="button" class="bywa-realisation-list-card__media" aria-label="' . esc_attr(sprintf(__('Agrandir l’image de %s', 'bywa-content-manager'), $title)) . '"';
+                        echo '<button type="button" class="bywa-realisation-list-card__media" aria-label="' . esc_attr(sprintf(__('Mărește imaginea lucrării %s', 'bywa-content-manager'), $title)) . '"';
                         if (!empty($cover_url)) {
                             echo ' data-bywa-modal-trigger data-bywa-modal-image="' . esc_url($cover_url) . '" data-bywa-modal-alt="' . esc_attr($cover_alt) . '"';
                         } else {
@@ -451,7 +451,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
                     echo '</div>';
 
                     echo '<div class="bywa-realisation-list-card__content">';
-                        echo '<span class="bywa-realisation-list-card__eyebrow">Réalisation locale</span>';
+                        echo '<span class="bywa-realisation-list-card__eyebrow">Lucrare locală</span>';
                         echo '<h3 class="bywa-card__title">' . esc_html($title) . '</h3>';
 
                         if (!empty($content_parts['short'])) {
@@ -460,7 +460,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
 
                                 if (!empty($content_parts['is_truncated'])) {
                                     echo '<div class="bywa-realisation-list-card__excerpt-full bywa-entry-content" hidden>' . $content_parts['full'] . '</div>';
-                                    echo ' <button type="button" class="bywa-read-more bywa-realisation-list-card__readmore-toggle" data-bywa-readmore-toggle aria-expanded="false">' . esc_html__('Lire plus', 'bywa-content-manager') . ' <span class="bi bi-plus-lg" aria-hidden="true"></span></button>';
+                                echo ' <button type="button" class="bywa-read-more bywa-realisation-list-card__readmore-toggle" data-bywa-readmore-toggle aria-expanded="false">' . esc_html__('Citește mai mult', 'bywa-content-manager') . ' <span class="bi bi-plus-lg" aria-hidden="true"></span></button>';
                                 } else {
                                     echo '<div class="bywa-realisation-list-card__excerpt-full bywa-entry-content" hidden>' . $content_parts['full'] . '</div>';
                                 }
@@ -469,7 +469,7 @@ function bywa_realisations_render_list_results($atts, $paged = 1, $per_page = 10
 
                         if (!empty($gallery_html)) {
                             echo '<div class="bywa-realisation-list-card__gallery-wrap">';
-                                echo '<span class="bywa-realisation-list-card__gallery-label">Vues du chantier</span>';
+                                echo '<span class="bywa-realisation-list-card__gallery-label">Imagini de pe șantier</span>';
                                 echo $gallery_html;
                             echo '</div>';
                         }
@@ -602,7 +602,7 @@ function bywa_realisations_shortcode($atts) {
         'orderby'  => 'date',
         'order'    => 'DESC',
         'gallery_limit' => 4,
-        'link_label' => 'Voir la réalisation',
+        'link_label' => 'Vezi lucrarea',
         'excerpt_length' => 220,
         'archive_link' => '',
         'view' => 'list',
@@ -617,7 +617,7 @@ function bywa_realisations_shortcode($atts) {
     $order = strtoupper($atts['order']) === 'ASC' ? 'ASC' : 'DESC';
     $gallery_limit = max(1, intval($atts['gallery_limit']));
     $excerpt_length = max(40, intval($atts['excerpt_length']));
-    $link_label = !empty($atts['link_label']) ? sanitize_text_field($atts['link_label']) : 'Voir la réalisation';
+    $link_label = !empty($atts['link_label']) ? sanitize_text_field($atts['link_label']) : 'Vezi lucrarea';
     $show_archive_link = ($atts['archive_link'] === 'yes');
     $allowed_views = array('list', 'grid', 'simple');
     $default_view = in_array($atts['view'], $allowed_views, true) ? $atts['view'] : 'list';
@@ -701,7 +701,7 @@ function bywa_realisations_shortcode($atts) {
         <div class="bywa-realisations-browser" data-bywa-realisations-root data-bywa-realisations-view="<?php echo esc_attr($default_view); ?>" data-bywa-realisations-current-page="<?php echo esc_attr((int) $results['current_page']); ?>" data-bywa-realisations-config="<?php echo esc_attr(wp_json_encode($ajax_config)); ?>">
             <div class="bywa-realisations-browser__filters">
                 <div class="bywa-realisations-browser__field">
-                    <label for="bywa-realisations-per-page"><?php esc_html_e('Résultats par page', 'bywa-content-manager'); ?></label>
+                    <label for="bywa-realisations-per-page"><?php esc_html_e('Rezultate pe pagină', 'bywa-content-manager'); ?></label>
                     <select id="bywa-realisations-per-page" data-bywa-realisations-per-page>
                         <?php foreach (bywa_realisations_get_allowed_per_page_options() as $option) : ?>
                             <option value="<?php echo esc_attr($option); ?>" <?php selected($current_per_page, $option); ?>><?php echo esc_html($option); ?></option>
@@ -709,29 +709,29 @@ function bywa_realisations_shortcode($atts) {
                     </select>
                 </div>
 
-                <div class="bywa-realisations-browser__field bywa-realisations-browser__view-switch" role="group" aria-label="<?php esc_attr_e('Changer de vue', 'bywa-content-manager'); ?>">
-                    <span class="bywa-realisations-browser__field-label"><?php esc_html_e('Vue', 'bywa-content-manager'); ?></span>
+                <div class="bywa-realisations-browser__field bywa-realisations-browser__view-switch" role="group" aria-label="<?php esc_attr_e('Schimbă vizualizarea', 'bywa-content-manager'); ?>">
+                    <span class="bywa-realisations-browser__field-label"><?php esc_html_e('Vizualizare', 'bywa-content-manager'); ?></span>
                     <div class="bywa-realisations-browser__view-switch-inner">
                         <button type="button" class="bywa-realisations-browser__view-btn" data-bywa-realisations-view-btn="list" aria-pressed="<?php echo $default_view === 'list' ? 'true' : 'false'; ?>">
                             <span class="bi bi-list-ul" aria-hidden="true"></span>
-                            <span class="screen-reader-text"><?php esc_html_e('Vue actuelle avec image', 'bywa-content-manager'); ?></span>
+                            <span class="screen-reader-text"><?php esc_html_e('Vizualizare listă cu imagine', 'bywa-content-manager'); ?></span>
                         </button>
                         <button type="button" class="bywa-realisations-browser__view-btn" data-bywa-realisations-view-btn="grid" aria-pressed="<?php echo $default_view === 'grid' ? 'true' : 'false'; ?>">
                             <span class="bi bi-grid-3x3-gap-fill" aria-hidden="true"></span>
-                            <span class="screen-reader-text"><?php esc_html_e('Vue grille compacte', 'bywa-content-manager'); ?></span>
+                            <span class="screen-reader-text"><?php esc_html_e('Vizualizare grilă compactă', 'bywa-content-manager'); ?></span>
                         </button>
                         <button type="button" class="bywa-realisations-browser__view-btn" data-bywa-realisations-view-btn="simple" aria-pressed="<?php echo $default_view === 'simple' ? 'true' : 'false'; ?>">
                             <span class="bi bi-card-list" aria-hidden="true"></span>
-                            <span class="screen-reader-text"><?php esc_html_e('Vue liste simple sans image', 'bywa-content-manager'); ?></span>
+                            <span class="screen-reader-text"><?php esc_html_e('Vizualizare listă simplă fără imagine', 'bywa-content-manager'); ?></span>
                         </button>
                     </div>
                 </div>
 
                 <?php if (!empty($type_options)) : ?>
                     <div class="bywa-realisations-browser__field">
-                        <label for="bywa-realisations-type"><?php esc_html_e('Type de réalisation', 'bywa-content-manager'); ?></label>
+                        <label for="bywa-realisations-type"><?php esc_html_e('Tip de lucrare', 'bywa-content-manager'); ?></label>
                         <select id="bywa-realisations-type" data-bywa-realisations-type>
-                            <option value=""><?php esc_html_e('Tous les types', 'bywa-content-manager'); ?></option>
+                            <option value=""><?php esc_html_e('Toate tipurile', 'bywa-content-manager'); ?></option>
                             <?php foreach ($type_options as $type_option) : ?>
                                 <option value="<?php echo esc_attr($type_option['slug']); ?>"><?php echo esc_html($type_option['label']); ?></option>
                             <?php endforeach; ?>
@@ -751,9 +751,9 @@ function bywa_realisations_shortcode($atts) {
             </div>
 
             <div class="bywa-media-modal" data-bywa-media-modal hidden aria-hidden="true">
-                <button type="button" class="bywa-media-modal__backdrop" data-bywa-modal-close aria-label="<?php esc_attr_e('Fermer la fenêtre', 'bywa-content-manager'); ?>"></button>
-                <div class="bywa-media-modal__dialog" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e('Image agrandie', 'bywa-content-manager'); ?>">
-                    <button type="button" class="bywa-media-modal__close" data-bywa-modal-close aria-label="<?php esc_attr_e('Fermer la fenêtre', 'bywa-content-manager'); ?>"><span class="bi bi-x-lg" aria-hidden="true"></span></button>
+                <button type="button" class="bywa-media-modal__backdrop" data-bywa-modal-close aria-label="<?php esc_attr_e('Închide fereastra', 'bywa-content-manager'); ?>"></button>
+                <div class="bywa-media-modal__dialog" role="dialog" aria-modal="true" aria-label="<?php esc_attr_e('Imagine mărită', 'bywa-content-manager'); ?>">
+                    <button type="button" class="bywa-media-modal__close" data-bywa-modal-close aria-label="<?php esc_attr_e('Închide fereastra', 'bywa-content-manager'); ?>"><span class="bi bi-x-lg" aria-hidden="true"></span></button>
                     <img class="bywa-media-modal__image" data-bywa-modal-image-target src="" alt="">
                 </div>
             </div>
@@ -785,7 +785,7 @@ function bywa_realisations_shortcode($atts) {
                 if (!empty($terms) && !is_wp_error($terms)) {
                     $location = $terms[0]->name;
                 } else {
-                    $location = 'Réalisation';
+                    $location = 'Lucrare';
                 }
             }
 
@@ -842,7 +842,7 @@ function bywa_realisations_shortcode($atts) {
                 if (!empty($terms) && !is_wp_error($terms)) {
                     $location = $terms[0]->name;
                 } else {
-                    $location = 'Réalisation';
+                    $location = 'Lucrare';
                 }
             }
 
@@ -852,7 +852,7 @@ function bywa_realisations_shortcode($atts) {
 
             echo '<article class="' . esc_attr($card_classes) . '">';
                 echo '<div class="bywa-realisation-list-card__media-wrap">';
-                    echo '<button type="button" class="bywa-realisation-list-card__media" aria-label="' . esc_attr(sprintf(__('Agrandir l’image de %s', 'bywa-content-manager'), $title)) . '"';
+                    echo '<button type="button" class="bywa-realisation-list-card__media" aria-label="' . esc_attr(sprintf(__('Mărește imaginea lucrării %s', 'bywa-content-manager'), $title)) . '"';
                     if (!empty($cover_url)) {
                         echo ' data-bywa-modal-trigger data-bywa-modal-image="' . esc_url($cover_url) . '" data-bywa-modal-alt="' . esc_attr($cover_alt) . '"';
                     } else {
@@ -872,7 +872,7 @@ function bywa_realisations_shortcode($atts) {
                 echo '</div>';
 
                 echo '<div class="bywa-realisation-list-card__content">';
-                    echo '<span class="bywa-realisation-list-card__eyebrow">Réalisation locale</span>';
+                    echo '<span class="bywa-realisation-list-card__eyebrow">Lucrare locală</span>';
                     echo '<h3 class="bywa-card__title">' . esc_html($title) . '</h3>';
 
                     if (!empty($content_parts['short'])) {
@@ -881,7 +881,7 @@ function bywa_realisations_shortcode($atts) {
 
                             if (!empty($content_parts['is_truncated'])) {
                                 echo '<div class="bywa-realisation-list-card__excerpt-full bywa-entry-content" hidden>' . $content_parts['full'] . '</div>';
-                                echo ' <button type="button" class="bywa-read-more bywa-realisation-list-card__readmore-toggle" data-bywa-readmore-toggle aria-expanded="false">' . esc_html__('Lire plus', 'bywa-content-manager') . ' <span class="bi bi-plus-lg" aria-hidden="true"></span></button>';
+                                echo ' <button type="button" class="bywa-read-more bywa-realisation-list-card__readmore-toggle" data-bywa-readmore-toggle aria-expanded="false">' . esc_html__('Citește mai mult', 'bywa-content-manager') . ' <span class="bi bi-plus-lg" aria-hidden="true"></span></button>';
                             } else {
                                 echo '<div class="bywa-realisation-list-card__excerpt-full bywa-entry-content" hidden>' . $content_parts['full'] . '</div>';
                             }
@@ -890,7 +890,7 @@ function bywa_realisations_shortcode($atts) {
 
                     if (!empty($gallery_html)) {
                         echo '<div class="bywa-realisation-list-card__gallery-wrap">';
-                            echo '<span class="bywa-realisation-list-card__gallery-label">Vues du chantier</span>';
+                            echo '<span class="bywa-realisation-list-card__gallery-label">Imagini de pe șantier</span>';
                             echo $gallery_html;
                         echo '</div>';
                     }
@@ -906,9 +906,9 @@ function bywa_realisations_shortcode($atts) {
 
         echo '</div>';
         echo '<div class="bywa-media-modal" data-bywa-media-modal hidden aria-hidden="true">';
-            echo '<button type="button" class="bywa-media-modal__backdrop" data-bywa-modal-close aria-label="' . esc_attr__('Fermer la fenêtre', 'bywa-content-manager') . '"></button>';
-            echo '<div class="bywa-media-modal__dialog" role="dialog" aria-modal="true" aria-label="' . esc_attr__('Image agrandie', 'bywa-content-manager') . '">';
-                echo '<button type="button" class="bywa-media-modal__close" data-bywa-modal-close aria-label="' . esc_attr__('Fermer la fenêtre', 'bywa-content-manager') . '"><span class="bi bi-x-lg" aria-hidden="true"></span></button>';
+            echo '<button type="button" class="bywa-media-modal__backdrop" data-bywa-modal-close aria-label="' . esc_attr__('Închide fereastra', 'bywa-content-manager') . '"></button>';
+            echo '<div class="bywa-media-modal__dialog" role="dialog" aria-modal="true" aria-label="' . esc_attr__('Imagine mărită', 'bywa-content-manager') . '">';
+                echo '<button type="button" class="bywa-media-modal__close" data-bywa-modal-close aria-label="' . esc_attr__('Închide fereastra', 'bywa-content-manager') . '"><span class="bi bi-x-lg" aria-hidden="true"></span></button>';
                 echo '<img class="bywa-media-modal__image" data-bywa-modal-image-target src="" alt="">';
             echo '</div>';
         echo '</div>';
@@ -1013,7 +1013,7 @@ function bywa_realisations_ajax_filter() {
         'orderby'  => 'date',
         'order'    => 'DESC',
         'gallery_limit' => 4,
-        'link_label' => 'Voir la réalisation',
+        'link_label' => 'Vezi lucrarea',
         'excerpt_length' => 220,
         'archive_link' => '',
         'view' => 'list',

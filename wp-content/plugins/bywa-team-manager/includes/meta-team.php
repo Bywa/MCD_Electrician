@@ -254,7 +254,7 @@ function bywa_tm_filter_team_banner_data($data, $post_id, $post_type) {
         }
     }
 
-    $data['kicker'] = $kicker !== '' ? sanitize_text_field($kicker) : (!empty($data['kicker']) ? $data['kicker'] : __('Entreprise', 'bywa-team-manager'));
+    $data['kicker'] = $kicker !== '' ? sanitize_text_field($kicker) : (!empty($data['kicker']) ? $data['kicker'] : __('Echipă', 'bywa-team-manager'));
     $data['title'] = $title !== '' ? sanitize_text_field($title) : get_the_title($post_id);
     $data['text'] = $text !== '' ? sanitize_textarea_field($text) : (!empty($data['text']) ? $data['text'] : '');
     $data['action_1'] = array(

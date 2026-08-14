@@ -26,8 +26,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         toggle.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
         toggle.innerHTML = isExpanded
-          ? 'Lire plus <span class="bi bi-plus-lg" aria-hidden="true"></span>'
-          : 'Réduire <span class="bi bi-plus-lg" aria-hidden="true"></span>';
+          ? 'Citește mai puțin <span class="bi bi-plus-lg" aria-hidden="true"></span>'
+          : 'Citește mai mult <span class="bi bi-plus-lg" aria-hidden="true"></span>';
 
         shortText.hidden = !isExpanded;
         fullText.hidden = isExpanded;

@@ -11,35 +11,35 @@ get_header();
         <div class="container bywa-404__content">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-7">
-                    <span class="bywa-404__eyebrow"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Erreur 404</span>
-                    <h1 class="bywa-404__title">Page introuvable</h1>
+                    <span class="bywa-404__eyebrow"><i class="bi bi-exclamation-triangle" aria-hidden="true"></i> Eroare 404</span>
+                    <h1 class="bywa-404__title">Pagina nu a fost găsită</h1>
                     <p class="bywa-404__lead">
-                        La page demandée n’existe pas ou a été déplacée. Vous pouvez revenir à l’accueil,
-                        consulter nos services, ou nous contacter directement pour une réponse rapide.
+                        Pagina solicitată nu există sau a fost mutată. Poți reveni la pagina principală,
+                        consulta serviciile noastre sau ne poți contacta direct pentru un răspuns rapid.
                     </p>
 
                     <div class="bywa-404__actions">
-                        <a class="bywa-btn bywa-btn-primary" href="<?php echo esc_url(home_url('/')); ?>">Retour à l’accueil</a>
-                        <a class="bywa-btn bywa-btn-outline-dark" href="<?php echo esc_url(bywa_eco_get_contact_url()); ?>">Demander un devis</a>
+                        <a class="bywa-btn bywa-btn-primary" href="<?php echo esc_url(home_url('/')); ?>">Înapoi la prima pagină</a>
+                        <a class="bywa-btn bywa-btn-outline-dark" href="<?php echo esc_url(bywa_eco_get_contact_url()); ?>">Cere o ofertă</a>
                     </div>
                 </div>
 
                 <div class="col-lg-5">
                     <aside class="bywa-404__panel">
-                        <h2>Liens utiles</h2>
-                        <p>Accès rapide aux pages les plus consultées du site.</p>
+                        <h2>Legături utile</h2>
+                        <p>Acces rapid la cele mai consultate pagini ale site-ului.</p>
 
                         <div class="bywa-404__links">
                             <a href="<?php echo esc_url(home_url('/services/')); ?>">
-                                <span>Services</span>
+                                <span>Servicii</span>
                                 <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
                             </a>
                             <a href="<?php echo esc_url(home_url('/realisations/')); ?>">
-                                <span>Réalisations</span>
+                                <span>Lucrări</span>
                                 <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
                             </a>
                             <a href="<?php echo esc_url(home_url('/entreprise/')); ?>">
-                                <span>Entreprise</span>
+                                <span>Companie</span>
                                 <i class="bi bi-arrow-up-right" aria-hidden="true"></i>
                             </a>
                             <a href="<?php echo esc_url(bywa_eco_get_contact_url()); ?>">
@@ -54,8 +54,8 @@ get_header();
             <div class="row mt-5">
                 <div class="col-12">
                     <div class="bywa-404__panel">
-                        <h2>Recherche rapide</h2>
-                        <p>Si vous cherchez une information précise, utilisez la recherche du site.</p>
+                        <h2>Căutare rapidă</h2>
+                        <p>Dacă vrei o informație exactă, folosește căutarea site-ului.</p>
                         <?php get_search_form(); ?>
                     </div>
                 </div>

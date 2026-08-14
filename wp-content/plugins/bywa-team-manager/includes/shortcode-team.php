@@ -39,8 +39,8 @@ function bywa_tm_render_gallery($gallery_ids) {
         <div class="bywa-team-showcase__visual bywa-reveal">
             <div class="bywa-team-slider bywa-team-slider--empty">
                 <div class="bywa-team-slider__empty">
-                    <span><?php esc_html_e('Ajoutez jusqu’à 5 photos d’équipe', 'bywa-team-manager'); ?></span>
-                    <strong><?php esc_html_e('Galerie équipe', 'bywa-team-manager'); ?></strong>
+                    <span><?php esc_html_e('Adaugă până la 5 fotografii ale echipei', 'bywa-team-manager'); ?></span>
+                    <strong><?php esc_html_e('Galeria echipei', 'bywa-team-manager'); ?></strong>
                 </div>
             </div>
         </div>
@@ -73,13 +73,13 @@ function bywa_tm_render_gallery($gallery_ids) {
 
             <?php if (count($gallery_ids) > 1) : ?>
                 <div class="bywa-team-slider__controls">
-                    <button type="button" class="bywa-team-slider__arrow bywa-team-slider__arrow--prev" data-bywa-team-prev aria-label="<?php esc_attr_e('Photo précédente', 'bywa-team-manager'); ?>">‹</button>
-                    <div class="bywa-team-slider__dots" aria-label="<?php esc_attr_e('Navigation du slider équipe', 'bywa-team-manager'); ?>">
+                    <button type="button" class="bywa-team-slider__arrow bywa-team-slider__arrow--prev" data-bywa-team-prev aria-label="<?php esc_attr_e('Fotografia anterioară', 'bywa-team-manager'); ?>">‹</button>
+                    <div class="bywa-team-slider__dots" aria-label="<?php esc_attr_e('Navigarea sliderului echipei', 'bywa-team-manager'); ?>">
                         <?php foreach ($gallery_ids as $index => $attachment_id) : ?>
-                            <button type="button" class="bywa-team-slider__dot<?php echo 0 === $index ? ' is-active' : ''; ?>" data-bywa-team-dot="<?php echo esc_attr($index); ?>" aria-label="<?php echo esc_attr(sprintf(__('Aller à la photo %d', 'bywa-team-manager'), $index + 1)); ?>"></button>
+                            <button type="button" class="bywa-team-slider__dot<?php echo 0 === $index ? ' is-active' : ''; ?>" data-bywa-team-dot="<?php echo esc_attr($index); ?>" aria-label="<?php echo esc_attr(sprintf(__('Mergi la fotografia %d', 'bywa-team-manager'), $index + 1)); ?>"></button>
                         <?php endforeach; ?>
                     </div>
-                    <button type="button" class="bywa-team-slider__arrow bywa-team-slider__arrow--next" data-bywa-team-next aria-label="<?php esc_attr_e('Photo suivante', 'bywa-team-manager'); ?>">›</button>
+                    <button type="button" class="bywa-team-slider__arrow bywa-team-slider__arrow--next" data-bywa-team-next aria-label="<?php esc_attr_e('Fotografia următoare', 'bywa-team-manager'); ?>">›</button>
                 </div>
             <?php endif; ?>
         </div>
@@ -153,7 +153,7 @@ function bywa_tm_render_presentation_section($post_id, $args = array()) {
                                     <?php echo apply_filters('the_content', $content); ?>
                                 </div>
                             </div>
-                            <button type="button" class="bywa-team-showcase__more" data-bywa-team-description-toggle><?php esc_html_e('Voir plus', 'bywa-team-manager'); ?></button>
+                            <button type="button" class="bywa-team-showcase__more" data-bywa-team-description-toggle><?php esc_html_e('Vezi mai mult', 'bywa-team-manager'); ?></button>
                         <?php endif; ?>
 
                     </div>
@@ -222,7 +222,7 @@ function bywa_tm_render_team_grid($members, $show_photos = true) {
                     <h3 class="bywa-team-card__name"><?php echo esc_html($full_name); ?></h3>
 
                     <?php if (!empty($member['age'])) : ?>
-                        <p class="bywa-team-card__meta"><?php echo esc_html(sprintf(__('%s ans', 'bywa-team-manager'), intval($member['age']))); ?></p>
+                        <p class="bywa-team-card__meta"><?php echo esc_html(sprintf(__('%s ani', 'bywa-team-manager'), intval($member['age']))); ?></p>
                     <?php endif; ?>
                 </div>
             </article>
