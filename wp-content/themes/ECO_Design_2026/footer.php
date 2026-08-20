@@ -52,9 +52,8 @@ if (!defined('ABSPATH')) {
                 <h4>Contact</h4>
                 <div class="bywa-footer-contact">
                     <p><strong>Telefon principal</strong><br><a href="<?php echo esc_url(bywa_eco_get_tel_link(bywa_eco_get_contact_phone())); ?>"><?php echo esc_html(bywa_eco_get_contact_phone()); ?></a></p>
-                    <p><strong>Telefon secundar</strong><br><a href="<?php echo esc_url(bywa_eco_get_tel_link(bywa_eco_get_contact_phone_secondary())); ?>"><?php echo esc_html(bywa_eco_get_contact_phone_secondary()); ?></a></p>
                     <p><strong>E-mail</strong><br><a href="mailto:<?php echo esc_attr(bywa_eco_get_contact_email()); ?>"><?php echo esc_html(bywa_eco_get_contact_email()); ?></a></p>
-                    <p><strong>Adresă</strong><br><?php echo esc_html(bywa_eco_get_theme_mod('bywa_eco_address', 'Rue de Bel-Air 22, 2732 Reconvilier')); ?></p>
+                    <p><strong>Adresă</strong><br><?php echo esc_html(bywa_eco_get_theme_mod('bywa_eco_address', 'Bucuresti, Bacău Romănia')); ?></p>
                     <a class="bywa-footer-button" href="<?php echo esc_url(bywa_eco_get_contact_url()); ?>"><span class="bi bi-arrow-up-right"></span> Cere o ofertă</a>
                 </div>
             </div>

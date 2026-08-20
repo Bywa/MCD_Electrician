@@ -307,7 +307,7 @@ function bywa_realisation_details_callback($post) {
             name="bywa_realisation_location"
             value="<?php echo esc_attr($location); ?>"
             class="widefat"
-            placeholder="Ex: Reconvilier"
+            placeholder="Ex: Bucuresti"
         />
     </p>
 

@@ -97,9 +97,9 @@ function bywa_tm_render_presentation_section($post_id, $args = array()) {
     $members = bywa_tm_get_team_members($post_id);
     $gallery_ids = $presentation['gallery_ids'];
     $use_member_gallery_fallback = empty($gallery_ids);
-    $company_phone = function_exists('bywa_eco_get_contact_phone') ? bywa_eco_get_contact_phone() : get_theme_mod('bywa_eco_phone', '032 481 14 45');
-    $company_phone_secondary = function_exists('bywa_eco_get_contact_phone_secondary') ? bywa_eco_get_contact_phone_secondary() : '079 786 70 94';
-    $company_email = function_exists('bywa_eco_get_contact_email') ? bywa_eco_get_contact_email() : 'info@eco-electricite.ch';
+    $company_phone = function_exists('bywa_eco_get_contact_phone') ? bywa_eco_get_contact_phone() : get_theme_mod('bywa_eco_phone', '0759 670 711');
+    $company_phone_secondary = function_exists('bywa_eco_get_contact_phone_secondary') ? bywa_eco_get_contact_phone_secondary() : '';
+    $company_email = function_exists('bywa_eco_get_contact_email') ? bywa_eco_get_contact_email() : 'info@mcdelectrician.ro';
     $phone_link = function_exists('bywa_eco_get_tel_link') ? bywa_eco_get_tel_link($company_phone) : preg_replace('/[^0-9+]/', '', (string) $company_phone);
     $phone_secondary_link = function_exists('bywa_eco_get_tel_link') ? bywa_eco_get_tel_link($company_phone_secondary) : preg_replace('/[^0-9+]/', '', (string) $company_phone_secondary);
     $contact_url = home_url('/contact');
@@ -165,10 +165,6 @@ function bywa_tm_render_presentation_section($post_id, $args = array()) {
                         <div class="bywa-team-showcase__actions">
                             <?php if (!empty($phone_link)) : ?>
                                 <a class="bywa-btn bywa-btn-outline-dark" href="<?php echo esc_url($phone_link); ?>"><?php echo esc_html($company_phone); ?></a>
-                            <?php endif; ?>
-
-                            <?php if (!empty($phone_secondary_link)) : ?>
-                                <a class="bywa-btn bywa-btn-outline-dark" href="<?php echo esc_url($phone_secondary_link); ?>"><?php echo esc_html($company_phone_secondary); ?></a>
                             <?php endif; ?>
 
                             <?php if (!empty($company_email)) : ?>

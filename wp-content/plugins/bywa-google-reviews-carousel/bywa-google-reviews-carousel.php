@@ -261,7 +261,7 @@ final class BYWA_Google_Reviews_Carousel_Plugin {
 
         $query = trim((string) $query);
         if ('' === $query) {
-            return new WP_Error('wgrc_missing_query', __('Ajoute une requête de recherche Google, par ex. “ECO Electricité Reconvilier”.', 'bywa-google-reviews-carousel'));
+            return new WP_Error('wgrc_missing_query', __('Ajoute une requête de recherche Google, par ex. “MCD Electrician Bucuresti”.', 'bywa-google-reviews-carousel'));
         }
 
         $response = wp_remote_post('https://places.googleapis.com/v1/places:searchText', [
@@ -778,7 +778,7 @@ final class BYWA_Google_Reviews_Carousel_Plugin {
                                 <tr>
                                     <th scope="row"><label for="wgrc_search_query"><?php esc_html_e('Recherche Google / nom établissement', 'bywa-google-reviews-carousel'); ?></label></th>
                                     <td>
-                                        <input type="text" class="regular-text" id="wgrc_search_query" name="<?php echo esc_attr(self::OPTION_KEY); ?>[search_query]" value="<?php echo esc_attr($settings['search_query']); ?>" placeholder="ECO Electricité Reconvilier">
+                                        <input type="text" class="regular-text" id="wgrc_search_query" name="<?php echo esc_attr(self::OPTION_KEY); ?>[search_query]" value="<?php echo esc_attr($settings['search_query']); ?>" placeholder="MCD Electrician Bucuresti">
                                         <p class="description"><?php esc_html_e('Sert à retrouver automatiquement le Place ID.', 'bywa-google-reviews-carousel'); ?></p>
                                     </td>
                                 </tr>

@@ -16,13 +16,13 @@ $domains = array(
 );
 
 $testimonials = array(
-    array('name' => 'Client verificat', 'role' => 'Reconvilier', 'text' => 'Companie serioasă, reactivă și foarte curată pe șantier. Oferta a fost clară, iar lucrarea executată impecabil.'),
+    array('name' => 'Client verificat', 'role' => 'Bucuresti', 'text' => 'Companie serioasă, reactivă și foarte curată pe șantier. Oferta a fost clară, iar lucrarea executată impecabil.'),
     array('name' => 'Client verificat', 'role' => 'Tavannes', 'text' => 'Suport foarte bun pentru proiectul nostru de renovare electrică. Comunicarea a fost simplă, iar echipa de încredere.'),
     array('name' => 'Client verificat', 'role' => 'Bienne', 'text' => 'Instalare rapidă a unei stații de încărcare, sfaturi utile și intervenție profesionistă de la început până la final.'),
 );
 
 $projects = array(
-    array('title' => 'Renovare completă vilă', 'city' => 'Reconvilier', 'text' => 'Refacerea instalației electrice, iluminat LED, tablou și comenzi inteligente.'),
+    array('title' => 'Renovare completă vilă', 'city' => 'Bucuresti', 'text' => 'Refacerea instalației electrice, iluminat LED, tablou și comenzi inteligente.'),
     array('title' => 'Instalație solară + stație', 'city' => 'Bienne', 'text' => 'Producție fotovoltaică, monitorizare și încărcare vehicul electric.'),
     array('title' => 'Mentenanță imobil locativ', 'city' => 'Moutier', 'text' => 'Intervenții, conformitate și optimizarea spațiilor comune.'),
 );
@@ -154,7 +154,7 @@ $projects = array(
                     <div class="col-lg-6">
                         <span class="bywa-section-kicker">Companie</span>
                         <h2>O scurtă prezentare a echipei</h2>
-                        <p>ECO Electricite lucrează cu o echipă de dimensiuni umane, bazată în Reconvilier. Designul pune accent pe proximitate, încredere și claritatea serviciilor, cu orientare puternică spre ofertă și contact.</p>
+                        <p>ECO Electricite lucrează cu o echipă de dimensiuni umane, bazată în Bucuresti. Designul pune accent pe proximitate, încredere și claritatea serviciilor, cu orientare puternică spre ofertă și contact.</p>
                         <div class="bywa-about-list">
                             <div><strong>5 până la 6</strong><span>persoane full-time</span></div>
                             <div><strong>Local</strong><span>Jura bernois / Bienne</span></div>
@@ -167,11 +167,9 @@ $projects = array(
                             <div class="bywa-about-photo"></div>
                             <div class="bywa-about-box">
                                 <span>Adresă</span>
-                                <strong><?php echo esc_html(bywa_eco_get_theme_mod('bywa_eco_address', 'Rue de Bel-Air 22, 2732 Reconvilier')); ?></strong>
+                                <strong><?php echo esc_html(bywa_eco_get_theme_mod('bywa_eco_address', 'Bucuresti, Bacău Romănia')); ?></strong>
                                 <span>Telefon principal</span>
                                 <strong><a href="<?php echo esc_url(bywa_eco_get_tel_link(bywa_eco_get_contact_phone())); ?>"><?php echo esc_html(bywa_eco_get_contact_phone()); ?></a></strong>
-                                <span>Telefon secundar</span>
-                                <strong><a href="<?php echo esc_url(bywa_eco_get_tel_link(bywa_eco_get_contact_phone_secondary())); ?>"><?php echo esc_html(bywa_eco_get_contact_phone_secondary()); ?></a></strong>
                                 <span>E-mail</span>
                                 <strong><a href="mailto:<?php echo esc_attr(bywa_eco_get_contact_email()); ?>"><?php echo esc_html(bywa_eco_get_contact_email()); ?></a></strong>
                             </div>
@@ -192,7 +190,6 @@ $projects = array(
                     <div class="bywa-final-cta-actions">
                         <a class="bywa-btn bywa-btn-primary" href="<?php echo esc_url(bywa_eco_get_contact_url()); ?>">Cere o ofertă</a>
                         <a class="bywa-btn bywa-btn-outline-dark" href="<?php echo esc_url(bywa_eco_get_tel_link(bywa_eco_get_contact_phone())); ?>">Sună acum</a>
-                        <a class="bywa-btn bywa-btn-outline-dark" href="<?php echo esc_url(bywa_eco_get_tel_link(bywa_eco_get_contact_phone_secondary())); ?>"><?php echo esc_html(bywa_eco_get_contact_phone_secondary()); ?></a>
                     </div>
                 </div>
             </div>

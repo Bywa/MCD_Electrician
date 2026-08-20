@@ -21,10 +21,8 @@ get_header();
         $cta_label = bywa_eco_get_theme_mod('bywa_eco_cta_label', 'Cere o ofertă');
         $cta_url = bywa_eco_get_contact_url();
         $company_phone = bywa_eco_get_contact_phone();
-        $company_phone_secondary = bywa_eco_get_contact_phone_secondary();
         $company_email = bywa_eco_get_contact_email();
         $phone_link = bywa_eco_get_tel_link($company_phone);
-        $phone_secondary_link = bywa_eco_get_tel_link($company_phone_secondary);
 
         if (empty($location) && !empty($types) && !is_wp_error($types)) {
             $location = $types[0]->name;
@@ -128,12 +126,6 @@ get_header();
                                 <?php if (!empty($phone_link)) : ?>
                                     <a class="bywa-btn bywa-btn-outline-dark" href="<?php echo esc_url($phone_link); ?>">
                                         <?php echo esc_html($company_phone); ?>
-                                    </a>
-                                <?php endif; ?>
-
-                                <?php if (!empty($phone_secondary_link)) : ?>
-                                    <a class="bywa-btn bywa-btn-outline-dark" href="<?php echo esc_url($phone_secondary_link); ?>">
-                                        <?php echo esc_html($company_phone_secondary); ?>
                                     </a>
                                 <?php endif; ?>
 

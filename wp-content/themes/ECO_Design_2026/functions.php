@@ -141,10 +141,10 @@ function bywa_eco_customize_register($wp_customize) {
     ));
 
     $settings = array(
-        'bywa_eco_phone' => array('label' => 'Téléphone principal', 'default' => '032 481 14 45'),
-        'bywa_eco_phone_secondary' => array('label' => 'Téléphone secondaire', 'default' => '079 786 70 94'),
-        'bywa_eco_email' => array('label' => 'E-mail', 'default' => 'info@eco-electricite.ch'),
-        'bywa_eco_address' => array('label' => 'Adresse', 'default' => 'Rue de Bel-Air 22, 2732 Reconvilier'),
+        'bywa_eco_phone' => array('label' => 'Téléphone principal', 'default' => '0759 670 711'),
+        'bywa_eco_phone_secondary' => array('label' => 'Téléphone secondaire', 'default' => ''),
+        'bywa_eco_email' => array('label' => 'E-mail', 'default' => 'info@mcdelectrician.ro'),
+        'bywa_eco_address' => array('label' => 'Adresse', 'default' => 'Bucuresti, Bacău Romănia'),
         'bywa_eco_cta_label' => array('label' => 'Texte CTA hero 1', 'default' => 'Demander un devis'),
         'bywa_eco_cta_url' => array('label' => 'URL CTA hero 1', 'default' => '/contact/'),
         'bywa_eco_cta_secondary_label' => array('label' => 'Texte CTA hero 2', 'default' => 'Voir nos services'),
@@ -249,19 +249,25 @@ function bywa_eco_get_contact_url() {
 }
 
 function bywa_eco_get_contact_phone() {
-    return bywa_eco_get_theme_mod('bywa_eco_phone', '032 481 14 45');
+    return bywa_eco_get_theme_mod('bywa_eco_phone', '0759 670 711');
 }
 
 function bywa_eco_get_contact_phone_secondary() {
-    return bywa_eco_get_theme_mod('bywa_eco_phone_secondary', '079 786 70 94');
+    return bywa_eco_get_theme_mod('bywa_eco_phone_secondary', '');
 }
 
 function bywa_eco_get_contact_email() {
-    return sanitize_email(bywa_eco_get_theme_mod('bywa_eco_email', 'info@eco-electricite.ch'));
+    return sanitize_email(bywa_eco_get_theme_mod('bywa_eco_email', 'info@mcdelectrician.ro'));
 }
 
 function bywa_eco_get_tel_link($phone) {
-    return 'tel:' . preg_replace('/[^0-9+]/', '', (string) $phone);
+    $phone = preg_replace('/[^0-9+]/', '', (string) $phone);
+
+    if ($phone === '') {
+        return '';
+    }
+
+    return 'tel:' . $phone;
 }
 
 function bywa_eco_get_footer_logo_id() {
