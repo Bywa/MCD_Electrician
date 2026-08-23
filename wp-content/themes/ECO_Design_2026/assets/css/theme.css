@@ -1232,7 +1232,7 @@ body.bywa-modal-open .bywa-page-content {
 .bywa-footer-contact p { color: #58666a; line-height: 1.7; }
 .bywa-footer-contact strong { color: var(--bywa-text); }
 .bywa-footer-button {
-    display: inline-flex; align-items: center; gap: .6rem; background: var(--bywa-green); color: #fff; padding: .95rem 1.2rem; margin-top: .6rem;
+    color: white; display: inline-flex; align-items: center; gap: .6rem; background: var(--bywa-green); color: #fff; padding: .95rem 1.2rem; margin-top: .6rem;
 }
 .bywa-footer-bottom {
     padding: 26px 0 32px;
