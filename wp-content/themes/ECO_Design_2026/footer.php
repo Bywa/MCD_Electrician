@@ -14,7 +14,7 @@ if (!defined('ABSPATH')) {
                         <h3>Mai mult decât un electrician, un partener de încredere pentru proiectele tale.</h3>
                     </div>
                 </div>
-                <p class="bywa-footer-text">Instalații, intervenții, mentenanță, fotovoltaic, stații de încărcare și soluții inteligente în Jura bernois și regiunea Bienne.</p>
+                <p class="bywa-footer-text">Instalații electrice, intervenții, reparații și lucrări de mentenanță în București.</p>
                 <div class="bywa-footer-socials">
                     <?php foreach (bywa_eco_get_footer_social_links() as $social) : ?>
                         <a href="<?php echo esc_url($social['url']); ?>" target="_blank" rel="noopener noreferrer" aria-label="<?php echo esc_attr($social['label']); ?>">
