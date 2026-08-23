@@ -1231,7 +1231,7 @@ body.bywa-modal-open .bywa-page-content {
 .bywa-site-footer li a:hover, .bywa-footer-legal a:hover { color: var(--bywa-green-dark); }
 .bywa-footer-contact p { color: #58666a; line-height: 1.7; }
 .bywa-footer-contact strong { color: var(--bywa-text); }
-.bywa-footer-button {
+.bywa-footer-button{
     display: inline-flex;
     align-items: center;
     gap: .6rem;
@@ -1239,6 +1239,9 @@ body.bywa-modal-open .bywa-page-content {
     color: #fff;
     padding: .95rem 1.2rem;
     margin-top: .6rem;
+}
+.bywa-footer-button a {
+    color: white;
 }
 .bywa-footer-button:visited,
 .bywa-footer-button:hover,
