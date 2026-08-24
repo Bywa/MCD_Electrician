@@ -951,7 +951,7 @@ body.bywa-modal-open{
 .bywa-domaine-card--visual .bywa-domaine-card__number{
   position:absolute;
   right:30px;
-  bottom:24px;
+  bottom:55px;
   font-family:'Barlow Condensed', sans-serif;
   font-size:5rem;
   color:rgba(255,255,255,.92);
@@ -980,7 +980,7 @@ body.bywa-modal-open{
 .bywa-domaine-card--visual .bywa-card__excerpt{
   color:rgba(255,255,255,.86);
   line-height:1.75;
-  margin:0 0 1rem;
+  margin:0 0 5rem;
 }
 
 .bywa-domaine-card--visual .bywa-readmore{
