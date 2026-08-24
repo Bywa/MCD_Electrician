@@ -216,6 +216,39 @@ function bywa_eco_customize_register($wp_customize) {
         'priority' => 32,
     ));
 
+    $wp_customize->add_setting('bywa_eco_archive_service_hero_kicker', array(
+        'default'           => bywa_eco_get_archive_hero_label('service'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('bywa_eco_archive_service_hero_kicker', array(
+        'label'   => __('Services - kicker', 'eco-design-2026'),
+        'section' => 'bywa_eco_archive_heroes',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('bywa_eco_archive_service_hero_title', array(
+        'default'           => bywa_eco_get_archive_hero_label('service'),
+        'sanitize_callback' => 'sanitize_text_field',
+    ));
+
+    $wp_customize->add_control('bywa_eco_archive_service_hero_title', array(
+        'label'   => __('Services - titre', 'eco-design-2026'),
+        'section' => 'bywa_eco_archive_heroes',
+        'type'    => 'text',
+    ));
+
+    $wp_customize->add_setting('bywa_eco_archive_service_hero_text', array(
+        'default'           => '',
+        'sanitize_callback' => 'sanitize_textarea_field',
+    ));
+
+    $wp_customize->add_control('bywa_eco_archive_service_hero_text', array(
+        'label'   => __('Services - texte', 'eco-design-2026'),
+        'section' => 'bywa_eco_archive_heroes',
+        'type'    => 'textarea',
+    ));
+
     $archive_hero_images = array(
         'bywa_eco_archive_service_hero_image' => array(
             'label' => 'Image bannière archive Services',
@@ -375,11 +408,32 @@ function bywa_eco_get_archive_hero_image_url($post_type) {
 function bywa_eco_get_archive_hero_data($post_type) {
     $label = bywa_eco_get_archive_hero_label($post_type);
     $image = bywa_eco_get_archive_hero_image_url($post_type);
+    $kicker = $label;
+    $title = $label;
+    $text = get_the_archive_description();
+
+    if ($post_type === 'service') {
+        $kicker = bywa_eco_get_theme_mod('bywa_eco_archive_service_hero_kicker', $label);
+        $title = bywa_eco_get_theme_mod('bywa_eco_archive_service_hero_title', $label);
+        $text = bywa_eco_get_theme_mod('bywa_eco_archive_service_hero_text', '');
+
+        if ($kicker === '') {
+            $kicker = $label;
+        }
+
+        if ($title === '') {
+            $title = $label;
+        }
+
+        if ($text === '') {
+            $text = get_the_archive_description();
+        }
+    }
 
     return array(
-        'kicker' => $label,
-        'title'  => $label,
-        'text'   => get_the_archive_description(),
+        'kicker' => $kicker,
+        'title'  => $title,
+        'text'   => $text,
         'slides' => $image !== '' ? array($image) : array(),
     );
 }
