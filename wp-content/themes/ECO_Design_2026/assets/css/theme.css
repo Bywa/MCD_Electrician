@@ -1177,9 +1177,67 @@ body.bywa-modal-open .bywa-page-content {
     padding: 1rem 1.1rem;
 }
 
+body.bywa-cf7-modal-enabled .wpcf7 .wpcf7-response-output {
+    display: none;
+}
+
 .wpcf7 .wpcf7-not-valid-tip {
     font-size: .92rem;
     margin-top: .35rem;
+}
+
+.bywa-cf7-modal .modal-content {
+    border: 0;
+    border-radius: 28px;
+    box-shadow: 0 28px 70px rgba(8, 22, 47, .22);
+    overflow: hidden;
+}
+
+.bywa-cf7-modal .modal-header {
+    align-items: flex-start;
+    gap: 1rem;
+    border-bottom: 0;
+    padding: 1.4rem 1.5rem 0;
+}
+
+.bywa-cf7-modal .modal-body {
+    padding: 1rem 1.5rem 1.25rem;
+    color: var(--bywa-text);
+}
+
+.bywa-cf7-modal .modal-footer {
+    border-top: 0;
+    justify-content: flex-start;
+    padding: 0 1.5rem 1.5rem;
+}
+
+.bywa-cf7-modal__eyebrow {
+    color: var(--bywa-muted);
+    font-size: .78rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+}
+
+.bywa-cf7-modal__list {
+    margin: .85rem 0 0;
+    padding-left: 1.25rem;
+}
+
+.bywa-cf7-modal__list li + li {
+    margin-top: .35rem;
+}
+
+.bywa-cf7-modal.is-success .modal-header {
+    background: linear-gradient(135deg, rgba(15,91,216,.08), rgba(255,255,255,0));
+}
+
+.bywa-cf7-modal.is-warning .modal-header {
+    background: linear-gradient(135deg, rgba(255,210,31,.18), rgba(255,255,255,0));
+}
+
+.bywa-cf7-modal.is-error .modal-header {
+    background: linear-gradient(135deg, rgba(198,41,41,.14), rgba(255,255,255,0));
 }
 
 .bywa-site-footer {
