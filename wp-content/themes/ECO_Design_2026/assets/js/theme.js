@@ -73,15 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content">
             <div class="modal-header">
-              <div>
-                <p class="bywa-cf7-modal__eyebrow mb-1">Formulaire de contact</p>
-                <h2 class="modal-title h4 mb-0" data-bywa-cf7-modal-title></h2>
-              </div>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+              <h2 class="modal-title h4 mb-0" data-bywa-cf7-modal-title></h2>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Închide"></button>
             </div>
             <div class="modal-body" data-bywa-cf7-modal-body></div>
             <div class="modal-footer">
-              <button type="button" class="bywa-btn bywa-btn-primary" data-bs-dismiss="modal">Fermer</button>
+              <button type="button" class="bywa-btn bywa-btn-primary" data-bs-dismiss="modal">Închide</button>
             </div>
           </div>
         </div>
@@ -146,16 +143,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('wpcf7mailsent', (event) => {
       openModal(
-        'Demande envoyée',
-        event.detail?.apiResponse?.message || 'Votre demande a bien été envoyée.',
+        'Cererea a fost trimisă',
+        event.detail?.apiResponse?.message || 'Cererea ta a fost trimisă cu succes.',
         'success'
       );
     });
 
     document.addEventListener('wpcf7invalid', (event) => {
       openModal(
-        'Vérification nécessaire',
-        event.detail?.apiResponse?.message || 'Merci de corriger les champs signalés.',
+        'Verificare necesară',
+        event.detail?.apiResponse?.message || 'Te rugăm să corectezi câmpurile marcate.',
         'warning',
         event.detail?.apiResponse?.invalid_fields || []
       );
@@ -163,24 +160,24 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.addEventListener('wpcf7mailfailed', (event) => {
       openModal(
-        'Erreur d’envoi',
-        event.detail?.apiResponse?.message || 'Le message n’a pas pu être envoyé. Réessaie dans un instant.',
+        'Eroare la trimitere',
+        event.detail?.apiResponse?.message || 'Mesajul nu a putut fi trimis. Încearcă din nou peste puțin timp.',
         'error'
       );
     });
 
     document.addEventListener('wpcf7spam', (event) => {
       openModal(
-        'Envoi bloqué',
-        event.detail?.apiResponse?.message || 'L’envoi a été bloqué par la protection anti-spam.',
+        'Trimitere blocată',
+        event.detail?.apiResponse?.message || 'Trimiterea a fost blocată de protecția anti-spam.',
         'error'
       );
     });
 
     document.addEventListener('wpcf7aborted', (event) => {
       openModal(
-        'Envoi interrompu',
-        event.detail?.apiResponse?.message || 'La demande a été interrompue avant son envoi.',
+        'Trimitere întreruptă',
+        event.detail?.apiResponse?.message || 'Cererea a fost întreruptă înainte de trimitere.',
         'error'
       );
     });

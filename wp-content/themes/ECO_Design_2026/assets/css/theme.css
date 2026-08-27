@@ -1211,14 +1211,6 @@ body.bywa-cf7-modal-enabled .wpcf7 .wpcf7-response-output {
     padding: 0 1.5rem 1.5rem;
 }
 
-.bywa-cf7-modal__eyebrow {
-    color: var(--bywa-muted);
-    font-size: .78rem;
-    font-weight: 800;
-    letter-spacing: .08em;
-    text-transform: uppercase;
-}
-
 .bywa-cf7-modal__list {
     margin: .85rem 0 0;
     padding-left: 1.25rem;
